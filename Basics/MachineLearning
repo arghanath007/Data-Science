@@ -1,0 +1,208 @@
+Machine Learning -> Machine learning is not like a scientific equation where for a given problem we have to use this model versus or compared to that model. It is something like trial and error based where for the given problem and given data set we need to try various models with various parameters and then try to figure out which one(model with it's specific parameters) is the best one for this specific case.
+
+
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import linear_model
+
+df=pd.read_csv('/home/arghanath/Documents/Machine Learning/Resources Folder/ML/1_linear_reg/homeprices.csv')
+
+
+%matplotlib inline
+plt.xlabel('Area(sqr ft)')
+plt.ylabel('Price(US$)')
+plt.scatter(df.area, df.price, color='red', marker='+') -> Creating a plot from the Data Frame.
+
+reg=linear_model.LinearRegression() -> Creating an object for the linearRegression.
+
+reg.fit(df[['area']], df.price) ->We will fit the data which means we are training the linear Regression model using the available data points. 1st argument has to be a 2D array so we can supply the DataFrame which only contains the 'area'. 2nd argument would be the y-axis on the plot which is the 'price'.
+
+reg.predict([[3300]]) -> We wanted to know the price of '3300 sqr ft' and this gives us the price of that 'sqr ft' area. This accepts a 2D array now.
+
+y=mx + b  -> price = m* area +b.
+
+m-> Slope or gradient or coeffecient.
+y-> Y-intercept.
+
+When we trained the model, what it did it calculated the 'coeffecient' and 'intercept' of the model.
+
+reg.coef_ -> This is giving the coeffecient
+reg.intercept_ -> This is giving the intercept.
+
+m=reg.coef_
+x=3300
+b=reg.intercept_
+y=m*x +b
+y -> This is how the model was able to predict the value.
+
+dfArea=pd.read_csv('/home/arghanath/Documents/Machine Learning/Resources Folder/ML/1_linear_reg/areas.csv')
+dfArea
+p=reg.predict(dfArea)
+p -> This is how we are predicting the prices of all the areas in the dataFrame.
+
+%matplotlib inline
+plt.xlabel('Area', fontsize=20)
+plt.ylabel('Price', fontsize=20)
+plt.scatter(df.area, df.price, color='green', marker='+') 
+plt.plot(df.area,regNew.predict(df[['area']]),color='blue') ->  1st three lines are creating the scatter plot with the points on the graph and in the last line we are using the 'area' values from the																				dataFrame and predicting the prices and plotting them on the y-axis.
+
+
+Mean Square Error -> It is nothing but the actual data point(y) minus the predicted data point(y_Predicted). We square it sum them up and then divide by n(Number of data points). It is also called a cost function, there are various cost functions as well but Mean Square Error is the most famous one.
+	
+	MSE= (1/n)*(Sum of(y - (mx + b))^2) [y_Predicted = mx + b]
+
+Gradient descent is an algorithm that finds best fit line for given training data set. It takes less iterations and is a very efficient algorithm. 
+
+Saving Model using Pickle ->
+
+import pickle
+with open('model_with_pickle', 'wb') as f:
+    pickle.dump(regModel, f ) -> creating the file and storing the model into it.
+
+    with open('model_with_pickle', 'rb') as f:
+    model= pickle.load(f) -> Opening the file and grabbing the model stored within the file.
+
+
+Saving Model using Joblib ->
+
+    import joblib as jb
+    jb.dump(regModel, 'model_with_joblib') -> Creating the file and storing the model into it.
+
+    modelObj=jb.load('model_with_joblib') -> Opening the file and grabbing the model stored within the file.
+
+
+Categorical Variables are two types -> 
+
+    1) Nominal -> They dont have any numeric ordering between them. They dont have any order relationship between each other. Examples -> Names of townships, genders, names of colors etc.
+    2) Ordinal -> They have some sort of numeric ordering between them. Example -> College degrees be it Graduate, masters or Phd then we can say that graduate < masters < Phd. Customer satisfaction survey is a good example as we are rating satisfied, neutral or dissatisfied. We can order them numerically.
+
+    We have Norminal categorical variables and so simple integer encoding is not going to work. We are going to use a technique called as One Hot Encoding.
+
+
+    XR_train, XR_test, YR_train, YR_test =train_test_split(X,Y, test_size=0.2,random_state=10) -> 'random_state=10' this command makes sures that the output remain the same. If we dont use this command then everytime 'rain_test_split' is executed random values are selected which is good.
+
+
+    Logistic regression is one of the techniques used for classification problems.
+
+    Types of classification problems: 
+
+    1)Binary Classification -> It has only two categories. The answer is either 'YES' or "NO". Example: Will customer buy life insurance?
+    2)Multiclass Classification -> When it has more than two categories. Example: Which party a persion is going to vote for?
+
+    Sigmoid or Logit function  -> If we feed set of numbers to the sigmoid functions all it will do is convert them within the 'zero' to 'one' range.
+
+
+
+CONFUSION MATRIX:
+
+    Get an overall feeling of the model's accuracy and one of the ways is to use the 'confusion matrix'.
+
+    y_predicted=model.predict(X_test) -> Getting the predicted values of X_test
+    from sklearn.metrics import confusion_matrix
+
+    cm= confusion_matrix(y_test, y_predicted) -> 'y_test' which is the truth and 'y_predicted' which is the values that the model predicted. We get a 2D Array back.
+    cm
+
+    Confusion matrix is a nice visualization of how well the model is doing. Excluding the left diagonal, all of the squares where there are values other than '0' there the model is predicting the values falsely or wrongly. This is showing where the model is not working properly or giving incorrect predictions.
+
+
+DECISION TREE:
+
+    How do we select ordering of the features(Company name, Job Title, Degree etc)?
+
+    -> We should use an approach which gives us high information gain(Low entropy or randomness) at every split.
+
+    Gini Impurity -> This is nothing but some impurity in the dataset.
+
+    inputs['company_n']= le_company.fit_transform(inputs['company']) -> Creating an extra column in a dataFrame.
+
+Support Vector Machine(SVM):
+
+    Support Vector Machine(SVM) draws a hyper plane in nth dimensional space such that it maximizes margin between classification groups.
+
+    Gamma and Regularization: 
+
+        High Gamma -> Excluded the far away data points and included the closer ones for making my decision boundry.
+        Low Gamma-> Included both the closer as well as the far away data points. With this we might have some problem with accuracy but it might be ok computationally more effecient.
+
+        High Regularization(C)-> Without any errors but the line looks wig-zaggy or not smooth and try to overfit the model.
+        Low Regularization(C) -> Here we can take some errors(classification errors) and the line might look smoother compared to 'High Regularization'. It might be better for the model I have.
+
+    Kernel-> Transformation.
+
+    df['flower_name']= df.target.apply(lambda x: iris.target_names[x])-> From one column we are trying to generate another column.
+
+
+RANDOM FOREST:
+    
+    Random forest algorithm is another popular machine learning technique used in 'regression' and 'classification' both. It is called random forest because forest have trees and a tree in machine learning world means a 'decision tree'.
+
+
+K Fold Cross Validation: It not only allows us to compare different algorithms but the same algorithms with different parameters and see how is it working is it giving better or worse results.
+    
+    StratifiedKFold -> This is similar to 'KFold' but it is better in the fact that when we are separating out the folds, it will divide each of the classification categories in a uniform way. It could be very helpful for the iris dataset where we are let's say creating 3 folds then one fold maybe have only 1 type of flowers, the second fold maybe have 2 type of flowers and the last fold has only 1 type of flower and this maybe create problems. That's 'StratifiedKFold' is better.
+
+    We compared different classifiers and we can compare same classifier as well with different parameters. This is called as parameter tuning. In this way we can take a model and then we can do parameter tuning using the same algorithm basically, but then we are tuning the parameters of the algorithm and trying to find out which parameters gives the best result/performance for that algorithm.
+
+
+Machine Learning Algorithms are categorized into 3 parts: 
+    
+    1)Supervised learning -> In the given data set we have the class label or the target variable present. All of the above algorithms are Supervised learning algorithms.
+
+    2)Unsupervised learning -> All we have is a set of features. We dont know about the target variable or the class label. Using this dataset we try to understand the underlying structure of the dataset or try to find the clusters in the data and make predictions out of it.
+
+    3)Reinforcement learning
+
+
+
+UNSUPERVISED LEARNING: 
+
+
+    K-Means Clustering Algorithm -> 'k' here means a free parameter which means that before we start the algorithm we have to tell the algorithm what is the value of 'k' that we are looking for(here 'k' is 2 that as there are two clusters).
+
+        1) Identify two random points which we consider the center points of those two clusters. They are called as centroids.(Start with 'k' centroids by putting them at random place)
+        2) Cumpute distance of every point from centroid and cluster them accordingly. 
+        3) Adjust centroids so that they become center of gravity for given cluster.
+        4) Again re-cluster every point based on their distance with centroid
+        5) Again adjust centroid.
+        6) Recompute clusters and repeat this till data points stop changing clusters.
+
+            ***How to determine correct number of clusters(k)? -> Elbow method.
+
+            km.cluster_centers_ -> These are the centroids.([X,Y])
+
+            kmNew.cluster_centers_[:,0] -> This means that we want to go through all the rows and '0' means the first column(X). '1' means the second column(Y).
+
+            kms.inertia_ -> After we run 'kms.fit()', we have a parameter on 'kms' called as 'inertia_' which gives us the 'SSE' or 'Sum of Square Error'. 
+
+    NAIVE BAYES CLASSIFIER ALGORITHM:
+
+        GaussianNB -> We will use this when the data distribution is normal or it is like a Gaussian distribution or like a bell curve.
+
+    Hyper Parameter Tuning:
+
+    We have the Iris flower data set, where based on the petal and sepal width and length we are trying to predict what type of flower it is. The first question that arises is which model should we use there are so many to choose from and let's say we figured out that 'SVM' is the model we want to use to solve this problem but the worries doesn't end there. Now we, have hyper parameters such as what kind of 'kernel' and 'C' or 'gamma' values should we be using as there are so many values to choose form. The process of choosing the optimal parameter is called as hyper tuning.
+
+
+    L1 and L2 Regularization:
+
+    L1 -> The parameter is an absolute value.(Lasso Regression)
+    L2 -> The parameter is the square of the value.(Ridge Regression)
+
+    dataset=pd.get_dummies(dataset, drop_first=True) -> 'drop_first=True' to avoid the dummy variable trap.
+
+    PRINCIPAL COMPONENT ANALYSIS:
+
+        Principal Component Analysis is a technique used in machine learning to reduce dimensions. It is a process of figuring out most important features or principal components that has the most impact on the target variable. It is called dimensionality reduction technique as it can help to reduce dimensions.
+
+        Drawbacks: 
+
+            1)Scale features before applying PCA
+            2)Accuracy might drop.
+
+        dataset.data[0].reshape(8,8) -> Converts a 1D array into a 2D array.
+
+        from sklearn.preprocessing import StandardScaler -> Standard Scaler from -1 to 1.
+        

@@ -1,0 +1,505 @@
+###We can look at data in different ways i.e by creating a Dataframe:-
+	1) df=pd.read_csv('Full Path of the CSV file').
+	2)	weather_data= {
+	    'data': ['1/1/2017','1/2/2017','1/3/2017','1/4/2017','1/5/2017','1/6/2017'],
+	    'temperature': [32,45,24,18,19, 15],
+	    'windspeed':[6,4,8,5,2,10],
+	    'event':['Rain', 'Sunny','Snow', 'Snow', 'Rain', 'Sunny']
+		}
+		df=pd.DataFrame(weather_data) 
+	3)df1= pd.read_excel('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\3_different_ways_of_creating_dataframe\\weather_data.xlsx', 'Sheet1')
+
+	####GENERIC skleton of the codes here.
+	import pandas as pd
+	...some statement to be run to generate a df=pd.read_csv()
+	df
+
+
+
+df.shape -> It shows the dimensions of the file. Ex- (6,4) means that the file has '6' rows and '4' columns. (6,4) is a tuple.
+	For storing the values in variables -> rows, column= df.shape . We can now access the values by printing 'row' and 'column'
+
+df.head() -> It prints the initial rows of the file, if we have a very big file with a lot of rows. [df.head(2)]
+df.tail() -> It prints the final rows of the file, if we have a very big file with a lot of rows. [df.tail(2)]
+
+df[2:4] -> To print the rows from 2 upto row 4, not including 4. So the rows 2 and 3 are getting printed.
+
+df or df[:] -> To print everything from the file.
+
+df.columns -> To printout the names of all the columns.
+
+df.temperature or df['temperature'] -> To printout the data of the individual columns. [df.ColumnName or df['ColumnName']].
+
+type(df['temperature']) -> The type of the 'temperature' column is 'pandas.core.series.Series' or 'Pandas Series'.
+
+df[['data', 'event', 'temperature']] -> To print a specific few columns of the table for data analysis when we have too many columns.
+
+df['temperature'].max()  -> To printout the max. temp. of that('temperature') column.
+
+df['temperature'].mean() -> To get the average.
+
+df['temperature'].min() -> To get the minimun.
+
+df['temperature'].std() -> To get the standard deviation.
+
+df.describe() -> This function is a good way to quickly get the statistics of our data in the file.
+
+df.index -> To get the range of the index of the table, the column on the left most side of the table.
+
+df.set_index('data') -> To set the 'data' column as the new index of the table and this modifies the older Dataframe. Now we can execute this command -> df.loc['1/3/2017'] and this will give me that particular row.
+
+df.reset_index(inplace=True) -> To reset the index back to normal.
+
+import pandas as pd
+df=pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.csv', skiprows=1) -> To skip some rows at the top that are not needed necessarily to be imported into the Dataframe.
+						OR
+df=pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.csv', header=1) -> This is the same as above, it basically means that my header is starting from row 1 as indexing starts from 0 which means the 2 line in the CSV file.
+
+
+df=pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.csv', header=None) -> if we do not have any headers. To give names to the headers in the 'df' then we have to run this command 
+	-> 
+		df=pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.csv', header=None, names=['Ticker','Eps','Revenue','Price', 'Person'])
+
+
+df=pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.csv', nrows=3) -> To display some specific amount of rows from the start as the files has a large number of rows.
+
+
+df=pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.csv', na_values=['not available', 'n.a.']) -> For cleaning up messy data in the files.
+
+df=pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.csv', na_values={
+    'eps': ['not available', 'n.a.'],
+    'revenue': ['not available', 'n.a.',-1],
+    'price': ['not available', 'n.a.',-1],
+    'people':['not available', 'n.a.',-1]
+}) -> For the purpose of data cleaning as well but by creating a dictionary and being more specific. This allows us to do data munging and data wrangling.
+
+
+df.to_csv('newFile.csv') -> To write the DataFrame to a new file named as 'newFile.csv'. The indexing gets added to the file as well, if we dont want the indexing we can write the command as  
+	->
+	df.to_csv('newFile.csv', index=False) -> To remove indexing when creating a new file.
+
+df.to_csv('newFileColumns.csv', columns=['eps', 'price'], index=False) -> To include only specific columns that are needed.
+
+df.to_csv('newFile.csv', index=False, header=False) -> For not including headers(Column names).
+
+df=pd.read_excel('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.xlsx', "Sheet1") -> To read an Excel file, we have to give the 'Sheet name' as well as the second argument.
+
+
+(
+	import pandas as pd
+
+	def convert_people_cell(cell):
+	    if cell == 'n.a.':
+	        return 'Sam Walton'
+	    return cell
+
+	def convert_eps_cell(cell):
+	    if cell == 'not available':
+	        return None
+	    return cell
+
+
+	df=pd.read_excel('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\4_read_write_to_excel\\stock_data.xlsx', "Sheet1", converters={
+	    'people': convert_people_cell,
+	    'eps': convert_eps_cell,
+	})
+	df
+) -> For converting your messy data into something meaningfull with converters.
+
+
+df.to_excel('newFile.xlsx', sheet_name='stocks', startrow=1, startcol=2) -> To write to an excel file from a specific offset or a location.
+
+df.to_excel('newFile.xlsx', sheet_name='stocks', startrow=1, startcol=2, index=False) -> To omit index in Excel file.
+
+
+with pd.ExcelWriter('stocks_weather_combined.xlsx') as writer:
+	df_stocks.to_excel(writer, sheet_name='stocks')
+	df_stocks.to_excel(writer, sheet_name='weather') -> To add both the Dataframes 'df_stocks' and 'df_weather' into one file 'stocks_weather_combined.xlsx' with the help of the ExcelWriter() function.
+
+
+df= pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\5_handling_missing_data_fillna_dropna_interpolate\\weather_data.csv', parse_dates=['day']) -> To convert the 'day' column from 'str' or 'string' to 'Timestamp' as it is a csv file and not a excel file.
+
+type(df.day[0]) -> To check the type of the 'day' column in the dataframe.
+
+new_df= df.fillna(0) -> To replace the 'NaN' values with '0'.
+
+new_df=df.fillna({
+    'temperature': 0,
+    'windspeed': 0,
+    'event': 'no event',
+}) -> To customize specific columns with specific values with the help of a dictionary.
+
+new_df= df.fillna(method='ffill') -> 'ffill' means forward fill, which means that if there is 'NaN' value then the value previous to the 'NaN' value will replace the 'NaN' value. It is just copying previous day's value. It is copying vertically the data.
+
+new_df= df.fillna(method='bfill') -> 'bfill' means backward fill, which simply means it copies the value from the next day's value. It is also copying vertically the data.
+
+new_df= df.fillna(method='bfill', axis='columns') AND new_df= df.fillna(method='ffill', axis='columns') -> This both are copying the data horizontally from adjacent cell of the next column or the previous column respectively to the commands.
+
+new_df= df.fillna(method='ffill',limit=1) -> To limit the no. of times the value from the previous cell is being copied down. For limit=1, the value will be copied only once and if there are 'NaN' values beneath those then those remain as 'NaN' then dont change.
+
+new_df= df.interpolate() -> It is using linear interpolation to find the values of the 'NaN' places in the rows as by default it uses linear interpolation.
+
+
+new_df= df.interpolate(method='time') -> This only works on a Series or DataFrames with a DatatimeIndex. This is a time-weighted interpolation. For this command to work you have to use this following commands before hand 
+	->
+	1)df_new= pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\5_handling_missing_data_fillna_dropna_interpolate\\weather_data.csv', parse_dates=['day'])
+	2)df_new.set_index('day', inplace=True)
+	3)df_new1=df_new.interpolate(method='time')
+
+
+df_new2=df_new.dropna() -> To drop the rows that have some sort of 'NaN' values in them.
+
+df_new3=df_new.dropna(how='all') -> To drop the row or rows that have no values or all the values are 'NaN'.
+
+df_new4=df_new.dropna(thresh=1) -> If any row has atleast one proper value which is not 'NaN' then that row is kept in the Dataframe otherwise it is not.
+
+df_new5=df_new.dropna(thresh=2) -> It means for the row to be present in the Dataframe, it has to has atleast '2' valid values in the row.
+
+
+REPLACE:
+
+import pandas as pd
+import numpy as np
+df= pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\6_handling_missing_data_replace\\weather_data.csv')
+df_new=df.replace({
+    'temperature': -99999,
+    'windspeed': -99999,
+    'event': 0,
+}, np.NaN) 
+df_new -> It replaces the special values with 'NaN'. Here a dictionary is provided.
+
+df_new1=df.replace({
+    -99999: np.NaN,
+    '0': 'Fog'
+}) -> Replacing the special values but providing a mapping this time.
+
+df_new2=df_new1.replace({
+    'temperature': '[A-Za-z]',
+    'windspeed': '[A-za-z]'
+}, '', regex=True) -> Using a regex or regular expressions to remove unit symbols like 'F' or 'C' or 'KMPHr' or 'MPHr'
+
+
+df_new3= pd.DataFrame({
+    'score': ['exceptional', 'average', 'good', 'poor', 'average', 'exceptional'],
+    'student': ['rob', 'maya', 'parthiv', 'tom', 'julian', 'erica']
+})
+df_new3
+
+df_new4=df_new3.replace(['poor', 'average', 'good', 'exceptional'], [1,2,3,4]) -> The 1st list is the values which are being mapped to the second list values.
+
+
+GROUP BY:
+
+import pandas as pd
+df= pd.read_csv('C:\\Users\\JohnWick\\Desktop\\Machine Learning\\Resources Folder\\pandas\\7_group_by\\weather_by_cities.csv')
+df
+
+groupBY=df.groupby('city')
+groupBY -> This returns an Object, to view the object we have to iterate over it. This is pretty similar to the 'GROUP BY' functionality in SQL queries.
+
+for city, city_df in groupBY:
+    print(city) 	-> This is the Key.
+    print(city_df)  -> Iterating over the object to view the GROUP_BY data. The iterator is provided by the GROUP_BY object provides. This is the Value.
+
+
+df_new1=groupBY.get_group('paris') -> To get a specific DataFrame. It returns a new DataFrame.
+
+
+groupBY.max() -> It returns the max from every column for every city.
+groupBY.mean() -> It returns the mean/average from every column for every city.
+groupBY.describe() -> To get all of the statistics.
+
+
+CONCAT:
+
+import pandas as pd
+india_weather=pd.DataFrame({
+    'city': ['Mumbai', 'Delhi', 'Bangalore'],
+    'temperature': [32,45,30],
+    'humidity': [80,60,78]
+})
+india_weather
+us_weather=pd.DataFrame({
+    'city': ['New York', 'Chicago', 'Orlando'],
+    'temperature': [21,14,35],
+    'humidity': [68,65,77]
+})
+us_weather
+df=pd.concat([us_weather,india_weather], ignore_index=True) -> We can pass more than 2 DataFrames as well. To ignore the indexes of the previous/original DataFrames we have to use the 'ignore_index= True' command and the new DataFrame will have continous indexing. This is just concating two DataFrames into one.
+
+df_new1=pd.concat([us_weather,india_weather], keys=['india', 'us']) -> To generate some specific larger indexes which is useful and with this we can use the command 
+	-> 
+		df_new1.loc['india'] -> This gives us a sub-set of our original DataFrame which can be handy.
+
+
+temperature_df=pd.DataFrame({
+    'city': ['Mumbai', 'Delhi', 'Bangalore'],
+    'temperature': [32,45,30],
+})
+temperature_df
+windspeed_df=pd.DataFrame({
+    'city': ['Bangalore','Mumbai'],
+    'temperature': [32,45],
+}, index=[2,0])
+windspeed_df
+pd_new2= pd.concat([temperature_df,windspeed_df], axis=1) -> To concat two DataFrames that have some missing data and the data/values are not sequentially arranged with each other. To overcome this problems, we need to specify the indexes while creating the original DataFrames so when combining them they are arranged sequentially. We have a command 'axis=1' which means they will be concatinated columnwise or in columns whereas 'axis=0' which is the default command where they are concatinated rowswise.
+	Index is the way to align rows with different DataFrames while using concat operation
+
+
+series=pd.Series(['Humid','Dry', 'Rain'], name='event') -> To create a Pandas Series.
+
+
+series=pd.Series([ 'Rain','Humid','Dry'], name='event', index=[2,0,1])
+df_new3=pd.concat([temperature_df, series], axis=1) -> To add a Pandas series to a DataFrame as a column or columnwise using indexing as the Data are not in sequential order.
+
+
+MERGE:
+
+df1=pd.DataFrame({
+    'city': ['New York', 'Chicago', 'Orlando'],
+    'temperature': [21,14,35],
+})
+df2=pd.DataFrame({
+     'city': ['Orlando', 'Chicago','New York',],
+    'humidity': [68,65,77]
+})
+
+pd.merge(df1, df2, on='city') -> Merging the two dataFrames together. The command "on='city' " means that they are being merged based on the 'city' column. This is like the 'JOIN' functionality from SQL between two tables with the help of 'city' column.
+
+
+df3=pd.DataFrame({
+    'city': ['New York', 'Chicago','Orlando', 'Los Angeles'],
+    'temperature': [21,14,35, 30],
+})
+df4=pd.DataFrame({
+     'city': ['San Fransisco', 'Chicago','New York',],
+    'humidity': [60,65,77]
+})
+
+pd.merge(df3, df4, on='city') -> This merging is basically like intersection which means it is taking the rows which are common in both the columns. This is like the 'INNER_JOIN' in SQL.
+
+pd.merge(df3, df4, on='city', how='outer') -> This is basically like union of the two tables. It is like the 'OUTER_JOIN' in SQL. If we dont mention the command 'how='outer' ' then it takes 'how= 'inner' ' which is the default value.
+
+pd.merge(df3, df4, on='city', how='left') -> This is like 'LEFT_JOIN' where the common values and the values from the left/first DataFrame are taken from depending on the order of the merge call.
+
+pd.merge(df3, df4, on='city', how='right') -> This is like 'RIGHT_JOIN' where the common values and the values from the right/second DataFrame are taken from depending on the order of the merge call.
+
+pd.merge(df3, df4, on='city', how='outer', indicator=True) -> To know from where the Data in the tables are coming from which DataFrame.
+
+
+df7=pd.merge(df5,df6,on='city', suffixes=['_left', '_right']) -> If both of the DataFrames have same columns and the command 'suffixes=['_left', '_right']' is used to customize/differentiate the columns from one another.
+
+
+PIVOT:
+
+df_pivot=df.pivot(index='date', columns='city', values='temperature') -> The first argument or 'index' is what we want in the x-axis or row. The second argument or 'columns' is what we want in the y-axis or columns. The third argument is 'values' which means what values we want in the columns.
+
+
+PIVOT TABLE: It is used to summarize and aggregate data inside dataframe.
+
+dfNew=df_table.pivot_table(index='city', columns='date', aggfunc='sum') -> The 'aggfunc' is coming from 'numpy' and it is the function which is being executed here.
+
+dfNew1=df_table.pivot_table(index='city', columns='date', aggfunc='sum', margins=True) -> The 'margin=True' means that it gives more analysis on the data if we need it.
+
+df_table2.pivot_table(index=pd.Grouper(freq='M', key='date'), columns='city') -> 'freq= 'M' ' means that it is groupying based on Months. 'key= 'date' ' means it is the column on which this operation is being executed. 'columns='city' ' this means I want to show my cities as columns.
+
+
+MELT: It is used ti transform or reshape data.
+
+
+dfNew=pd.melt(df, id_vars=['day']) -> 1st parameter is the dataframe which we want to transform. 2nd parameter is the columns we want on the x-axis or basically the column we want to keep intact.
+	On this new dataframe we can do a bunch of operations like filtering by using this command ->
+		dfNew[dfNew['variable'] == 'chennai'] -> We are just displaying the rows that have chennai in them
+
+dfNew1=pd.melt(df, id_vars=['day'], var_name='City', value_name='Temperature') -> Naming the variable and the value columns.
+
+
+STACKING and UNSTACKING: Another way of transforming data in a dataFrame.
+
+
+df=pd.read_excel('/home/arghanath/Documents/Machine Learning/Resources Folder/pandas/12_stack/stocks.xlsx', header=[0,1]) -> We have to use the 'header=[0,1]' command because we have two headers or two level of headers in the table, 'Price' and 'Price to earnings ratio(P/E)' otherwise the table will not show up properly.
+
+df_Stacked1=df.stack(level=0)
+df_stacked=df.stack() -> To convert a particular columns into rows. The particular column is based on the 'level=0' argument.
+
+
+df_stacked.unstack() -> To back the original table before the 'stack()' was applied to it.
+
+
+CROSSTAB or CONTINGENCY TABLE: It is a type of table in a matrix format that displays the frequency distribution of the variables.
+
+pd.crosstab(df.Handedness, df.Nationality, margins=True) -> First argument is for the rows we want and the second argument is for the columns we want and the third argument gives us the total of each row.
+
+pd.crosstab([df.Handedness, df.Sex], df.Nationality, margins=True) 
+
+import numpy as np
+pd.crosstab([df.Sex],[df.Handedness], values=df.Age, aggfunc=np.average) -> To get the average of the data using the numpy function 'np.average'.
+
+
+Read Database records into pandas dataframe and write it back.
+
+Link -> https://www.youtube.com/watch?v=M-4EpNdlSuY&list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy&index=15
+
+
+df.rename(columns={
+    'Customer Name': 'name',
+    'Customer Phone': 'phone_number'
+}, inplace=True) -> To change the name of the columns of the dataFrame.
+
+
+Timeseries is a set of data points indexed in time order.
+
+
+df=pd.read_csv('/home/arghanath/Documents/Machine Learning/Resources Folder/pandas/14_ts_datetimeindex/aapl.csv', parse_dates=['Date']) -> By default in the values in the Date table are in the type of 'str' or 'string', which can be verified by using the command('type(df['Date'][0])'). If we use the 'parse_dates=['Date'])' command then the values in the 'Date' table is converted from 'str' to 'Timestamp'.
+
+	Using DataTimeIndex has many benifits such as we can use this command 'df.loc['2017-01']' to get the data of the month of Januanry of 2017. We can use the date as an index in the dataFrame.
+
+df.loc['2017-01'].Close.mean() -> This is giving us the average stock price of apple in the month of january 2017.
+
+
+df.loc['2017-01-05'] -> Data of a particular date.
+
+df.loc['2017-01-10': '2017-01-03'] -> Data from a particular range.
+
+df.Close.resample('M').mean() -> First we are selecting a column and then we are calling the 'resample' function with the value of 'M' which means monthly and then we use the mean() on the Monthly value.
+
+%matplotlib inline
+df.Close.resample('W').mean().plot() -> Weekly Basis.
+
+df.Close.resample('Q').mean().plot(kind='bar') -> Quaterly Basis.
+
+df.Close.plot() -> Normal without the resample().
+
+
+DATE_RANGE: This doesn't consider holidays specific to calendars. The frequency will only handle 					weekends and not holidays. For holidays to work we have to use holiday calendar.
+
+rng=pd.date_range(start='10/1/2020', end='10/31/2020', freq='B') -> Creating a date range column with the starting and ending range, freq='B' means it will include Bussiness days, so weekends will be omitted.
+
+dfNew.set_index(rng, inplace=True) -> Adding the date range column as the index of the dataFrame.
+
+dfNew.asfreq('D', method='pad') -> 'asfreq' is to set a new frequency to that dataFrame or to carry over data from a previous date or hour, 'D' means dates including weekends, method='pad' means fill the missing dates/holes we have in the data as well.
+
+
+rngNew=pd.date_range(start='10/1/2020', periods=69, freq='D') -> To create a range when we dont know the end date, we use periods, which gives the counts of the days we want. We can use this to create Test data for unit test or integration test.
+
+
+import numpy as np
+ts=pd.Series(np.random.randint(1,10,len(rngNew)), index=rngNew)
+ts.head(10)
+	-> We are creating a Series with the help of 'np.random.randint(1,10,len(rngNew)' which gives random numbers between '1' to '10' and count of the numbers is 'len(rngNew)'. The index of the Series is set by 'index=rngNew'. This is usefull for conducting unit test ot integration test.
+
+
+The most common problem in data analysis is lack of uniformity in the strucutre of input data.
+US -> mm/dd/yyyy
+Europe -> dd/mm/yyyy
+
+dates=['2020-01-05', 'Jan 5,2020', '01/05/2020', '2020/01/05','2020.01.05','20200105']
+pd.to_datetime(dates) -> To get a common format for all the different formates that are stores in 'dates'.
+
+pd.to_datetime('10/05/2000', dayfirst=True) -> To make sure that the first value in the date value is the value of the day i.e 10th is the day. Usefull for converting Europe dates to US dates, otherwise the convertion will be wrong.
+
+pd.to_datetime('10#05#2000', dayfirst=True, format='%d#%m#%Y') -> To make custom date formats.
+
+datesNew=['2020-01-05', 'Jan 5,2020', '01/05/2020', '2020/01/05','2020.01.05','Argha']
+pd.to_datetime(datesNew, errors='coerce') -> For handling errors in the different date formats.
+
+epochTime=1634094384
+dtNew=pd.to_datetime(epochTime, unit='s') -> Converting epoch time to human readable format.
+
+epochTime=1634094384
+dt=pd.to_datetime([epochTime], unit='s') -> Converting epoch time to datetime index by supplying the epoch time as array.
+
+dt.view('int64') -> To convert the datetime index into epoch time.
+
+Two important things for time series analysis: 
+	1)Time-stamp -> An instance of time is called as time-stamp.
+	2)Time span (Time duration/Time period) -> 
+
+
+import pandas as pd
+y=pd.Period('2020')
+y  -> This is the output ->  Period('2020', 'A-DEC') -> 'A-DEC' means Annually or yearly and it ends in December.
+
+dir(y) -> To look at all of the properties of the period.
+m=pd.Period('2021-1', freq='M') -> Created a monthly time period
+m+1 -> We can do operations on it and it is aware of the calendar and gives expected result.
+
+d=pd.Period('2020-2-28', ) ->Created a daily/day time period.
+d+1 -> It is aware if a yr is a leap yr or not.
+h + pd.offsets.Hour(5) -> We can add values like this as well.
+q=pd.Period('2017Q1') -> Creating a quaterly time period. 'Period('2017Q1', 'Q-DEC')'  -> 'Q-DEC' means quaterly and ending in December.
+
+qNew=pd.Period('2017Q1', freq='Q-Jan') -> To create a custom quaterly time Period where it starts in Feb of 2016 and ends in Jan of 2017
+
+qNew.asfreq('M', how='start') -> To change my current time period to a monthly time period and we want to use the start time of that time period.
+
+
+import numpy as np
+ps=pd.Series(np.random.randn(len(idxNew)), idxNew)
+ps
+ps.index -> Period Index
+pst=ps.to_timestamp()-> To convert to datetime index.
+pst.index
+
+pst.to_period() -> To convert datetime index back to Period index.
+
+
+exerciseNewDF=exerciseDF.set_index('Line Item')
+exerciseNewDF -> Set the index of the dataFrame as 'Line Item' which is a column.
+exerciseNewDF= exerciseNewDF.T -> This allowed us to Transpose the dataFrame.
+
+exerciseNewDF.index -> It is an 'Object' type index.
+exerciseNewDF.index= pd.PeriodIndex(exerciseNewDF.index, freq='Q-JAN') -> Converted the Object' type index into a Period Index.
+
+exerciseNewDF['Start date']= exerciseNewDF.index.map(lambda item:  item.start_time)
+exerciseNewDF['End date']= exerciseNewDF.index.map(lambda item:  item.end_time) -> Added the 'Start Time' and the 'End Time' columns to the dataFrame using the map operation by looping over all of the values with the 'lambda' expression.
+
+There are two types of DateTime Objects in Python:-
+
+1)Naive(No timezones awareness)
+2)Time zone aware datetime.
+
+df=pd.read_csv('/home/arghanath/Documents/Machine Learning/Resources Folder/pandas/19_ts_timezone/msft.csv', header=1, index_col='Date Time', parse_dates=True)
+df=df.tz_localize(tz='US/Eastern') -> We are localizing the Time zone of the dataFrame as this dataFrame has 'Naive' DateTime Object.
+
+dfNew=df.tz_convert(tz='Europe/berlin') -> We are not converting the 'US/Eastern' Timezone to 'Europe/berlin' timezone.
+
+from pytz import all_timezones
+all_timezones -> This has all of the timezones build in.
+
+dfCalcutta= dfNew.tz_convert(tz='Asia/Calcutta') -> Converting time zones.
+
+rangeNew=pd.date_range(start='10/5/2000', periods=20, freq='Q', tz='dateutil/Asia/Kolkata')
+s=pd.Series(index=rngNew, dtype='object') -> Setting the range to the Pandas Series 
+
+b=s.tz_localize(tz='Europe/Berlin') -> We have to use localize first because, this dataFrame had a native DateTime Object and in order to set the new Timezone we have to first use 'tz_localize()' on it.
+
+
+SHIFTING: It will just shift the data points to the right hand side in a graph or it will move the data points one place down in a column. We can call this method on either DataFrame or TimeSeries.
+
+df.shift(1) -> This will shift the data to the right hand side or down the column.
+df.shift(-1) -> This will shift the data to the left hand side or up/top of the column.
+
+
+We want to keep the data points intact and we want to adjust the dates
+
+df['Prev Day Price']= df['Price'].shift(1)
+df['1 Day Change']= df['Price'] - df['Prev Day Price'] 
+df['5 Days % return']= (df['Price'] - df['Price'].shift(5))*100/df['Price'].shift(5) -> Adding columns and doing some operations on them.
+
+
+dfNewPos=dfNew.shift(periods=1, freq='B') -> 'tshift' is depricated so we have to specify 'freq' for it to shift the 'dates' instead of the 'values'.
+
+
+
+
+
+
+
+### To conditionally print data from a DataFrame like we do in Database with SQL queries.
+
+df[df.temperature >=30] -> To printout the rows whose temperature is greater than 30.
+
+df[df['temperature'] == df['temperature'].max()] -> To get the row which has the highest/max temperature.
+
+df[['data', 'temperature']][df['temperature'] == df['temperature'].max()]  -> To get only the 'data' and the 'temperature' table.

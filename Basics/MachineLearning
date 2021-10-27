@@ -205,4 +205,21 @@ UNSUPERVISED LEARNING:
         dataset.data[0].reshape(8,8) -> Converts a 1D array into a 2D array.
 
         from sklearn.preprocessing import StandardScaler -> Standard Scaler from -1 to 1.
-        
+
+    BIAS Vs VARIANCE:
+
+        Overfit model -> It is a case of 'high variance' as test error vary too much. Here the 'test error' varies greatly based on the selection of the training dataset. Test error difference was high(like 100 and 21) but train error was zero so it has 'low bias.
+
+        Underfit model -> It is a case of 'low variance' as test error doesnt vary too much. Here, as the 'train error' is big it is said to have a 'high bias'.
+
+        Ideal model -> It has low 'variance' as well as low 'bias' because the test and train error are kinda low. 'Test error' doesn't vary too much based on the training samples that are selected that's why low 'variance'. 'Train error' in general is also low 'bias'.
+
+        BIAS: It is a measurement of how accurately a model can capture a pattern in a training dataset. When we are thinking about 'bias' we are always thinking about train error. If higher the train error, the higher is the bias. It is all about how close are we to the 'truth'. 
+
+        VARIANCE: When we are thinking about 'variance' we are always thinking about test error.
+
+
+STANDARD DEVIATION: It is a measure of the spread. How spread out a data is. It is used when the spread of the data is approximately normal resembling a Bell curve. It is used to understand if a specific data point is 'STANDARD and EXPECTED' or 'UNUSUAL and UNEXPECTED'. (68-95-99%) Rule. 68% -> '1' standard deviation of the mean. 95% -> '2' standard deviation of the mean. 99% -> '3' standard deviation of the mean.
+
+                        LOW -> A set of data is a 'low' standard deviation tells us that the data is closely clustered around the mean or average.
+                        HIGH ->A 'high' standard deviation indicates that the data is dispersed over a wider range of values.

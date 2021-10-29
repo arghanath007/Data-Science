@@ -223,3 +223,14 @@ STANDARD DEVIATION: It is a measure of the spread. How spread out a data is. It 
 
                         LOW -> A set of data is a 'low' standard deviation tells us that the data is closely clustered around the mean or average.
                         HIGH ->A 'high' standard deviation indicates that the data is dispersed over a wider range of values.
+
+
+SUMMARY:
+
+    1)We build the model
+    2)We did data cleaning
+    3)We did dimensionality reduction 
+    4)Feature Engineering
+    5)Model building outlier detection
+    6)Python flask server.
+    7)UI or website.

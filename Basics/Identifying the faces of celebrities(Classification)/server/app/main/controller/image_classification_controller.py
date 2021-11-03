@@ -1,7 +1,7 @@
 from flask_restx import Resource
 from app.main.service.image_prediction_service import celebrity_image_classification
 
-from app.mian.util.image_classification_dto import ImageClassificationDto
+from app.main.util.image_classification_dto import ImageClassificationDto
 from flask import request
 
 api=ImageClassificationDto.api

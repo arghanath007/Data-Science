@@ -1,4 +1,4 @@
-from app.main.service.save_service import image_save
+from app.main.service.image_save_service import image_save
 from app.main.util.apiresponse import apiResponse
 
 from flask import  request

@@ -7,14 +7,14 @@ eye_cascade=cv2.CascadeClassifier('./opencv/haarcascades/haarcascade_eye.xml')
 
 basedir=os.path.abspath(os.path.dirname(__file__))
 UPLOAD_FOLDER='./app/main/files'
-UPLOADED_PHOTOS_TEST='./app/main/files'
+UPLOADED_PHOTOS_DEST='./app/main/files'
 MAX_CONTENT_LENGTH=5*1024*1024
 
 class Config:
     SECRET_KEY=os.getenv('SECRET_KEY', 'VERY_VERY_SECRET_KEY')
     DEBUG=False
     UPLOAD_FOLDER=UPLOAD_FOLDER
-    UPLOADED_PHOTOS_TEST=UPLOADED_PHOTOS_TEST
+    UPLOADED_PHOTOS_DEST=UPLOADED_PHOTOS_DEST
     MAX_CONTENT_LENGTH=MAX_CONTENT_LENGTH
 
 class DevelopmentConfig(Config):
@@ -38,7 +38,7 @@ configs_by_name=dict(
 
 key=Config.SECRET_KEY
 
-authorization={
+authorizations={
     'apikey':{
         'type': 'apikey',
         'in': 'header',

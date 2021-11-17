@@ -247,3 +247,7 @@ Image Classification Project:
     faces = face_cascade.detectMultiScale(gray, 1.3, 5) -> Detecting on the gray image. It returned an array of faces. Ex: array([[352,  38, 233, 233]], dtype=int32) -> 1st is X-coordinate, 2nd is Y-coordinate, 3rd is width and 4th is height.
 
     Wavelet Transformation- It allows us to extract the important features from the image.
+
+
+    Classification Problem -> When we are finding the type of data or the dataset. Like when we were finding the faces of the celebrities.
+    Regression Problem -> When we are finding the value/score of some kind of input like the price of a house or the price of a land.

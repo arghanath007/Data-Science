@@ -1,0 +1,34 @@
+***To Open Anaconda Navigator on Linux run 'anaconda-navigator' in the terminal.
+
+**We can think of Logistic Regression as a simple single neuron.
+	The input parameter or the independent variable is called a feature in the Machine Learning terminology. 'Age' is the independent variable here.
+		Dependent variable is if person will buy insurance or not.
+
+Dense Layer of Network -> Every neuron is connected with every other neuron in the hidden layer.
+
+model=keras.Sequential([
+    keras.layers.Dense(10, input_shape=(784), activation='sigmoid')  
+])
+	-> '10' is the number/count of outputs we have, '784' is the number/count of inputs we have in this neural network. The activation function we are using here is the 'sigmoid' function.
+
+
+cm=tf.math.confusion_matrix(labels=y_test,predictions=y_predicted_labels) -> 'y_test' is the truth data, 'y_predicted_labels' is the predicted data.
+
+**If we have value between +ve infinity to -ve infinity then it is hard to make a decision on the classification problem and if we have values between 0 and 1 then it is far more easier to make a decision on the classification problem. For this only, the 'sigmoid' function is called as the 'activation' function, which means it will decide wheather the neuron is firing or not firing. When the neuron is firing then it is saying that the person will buy the insurance. When the neuron is not firing then it is saying that the person will not buy the insurance. So we can see that having a 'sigmoid' or an activation function is helpfull in the output layer.
+	
+	The complex problems cannot be solved by linear equations. The patterns we see in the universe cannot be explained by linear equations all the time, that's why we need non-linear equations and the 'activation' function will help us build that non-linear equation.
+
+
+*******GENERAL GUIDE LINE for ACTIVATION FUNCTIONS -> Use 'sigmoid' in output layer. All other places try to use 'tanh' if possible. 'tanh' will canculate a mean of '0' and it will center the data so it is useful.
+
+Issues with sigmoid and tanh:-
+
+1)Vanishing Gradients(derivatives) -> (Gradient Descent Video)We need to calculate derivatives and back propagate the errors. If the derivates are closing too '0' or zero then the learning becomes extremely slow. This is called as the vanishing gradients problem. 
+	For this reason, they came up with a new function called as 'ReLU'. If the value is less than zero, then the output is zero(0). If the value is more than zero, then the output is same as the value. Eg:- if we feed '2' as the input to the 'ReLU' function then we will get '2' as the output. If we feed '-1' as the input to the 'ReLU' function then we will get '0' as the output.
+
+
+************GUIDELINES FOR HIDDEN LAYERS -> For hidden says, if we are not sure which activation function to use, then just use 'ReLU' as the default choice. Expecially for hidden layers.
+
+ReLU(z)=max(0,x).
+
+ReLU -> It also have 'Vanishing Gradients' problem when the values are less than zero. For these there is another flavour of 'ReLU' which is called as the 'Leaky ReLU'. Leaky ReLU(z)= max(0.1x,x) ['x' is the input value.]

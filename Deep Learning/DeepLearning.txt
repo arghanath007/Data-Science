@@ -32,3 +32,5 @@ Issues with sigmoid and tanh:-
 ReLU(z)=max(0,x).
 
 ReLU -> It also have 'Vanishing Gradients' problem when the values are less than zero. For these there is another flavour of 'ReLU' which is called as the 'Leaky ReLU'. Leaky ReLU(z)= max(0.1x,x) ['x' is the input value.]
+
+**Loss is used in neural network training.

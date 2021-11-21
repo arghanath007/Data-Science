@@ -7,7 +7,7 @@ from flask import request
 api=ImageClassificationDto.api
 _image_upload=ImageClassificationDto.image_upload
 
-@api.route('/predict')
+@api.route('/predict', methods=['GET','POST'])
 class FaceDetectionService(Resource):
     @api.doc('Image Upload')
     @api.expect(_image_upload)

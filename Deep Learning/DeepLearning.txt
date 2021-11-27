@@ -36,3 +36,7 @@ ReLU -> It also have 'Vanishing Gradients' problem when the values are less than
 **Loss is used in neural network training.
 
 **Gradient Decent Function helps us to find the weights(Co-effecient) which are w1,w2 and bias(Intercept).
+
+CHAIN RULE:
+	
+	In back propogation algorithms, there is a forward pass as well as a backward pass. In the forward pass we get the value of loss and when we get the loss we back propogate to adjust the weights.

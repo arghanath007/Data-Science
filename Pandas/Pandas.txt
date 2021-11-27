@@ -503,3 +503,11 @@ df[df.temperature >=30] -> To printout the rows whose temperature is greater tha
 df[df['temperature'] == df['temperature'].max()] -> To get the row which has the highest/max temperature.
 
 df[['data', 'temperature']][df['temperature'] == df['temperature'].max()]  -> To get only the 'data' and the 'temperature' table.
+
+
+Theory:-
+
+It has 2 main datatypes 
+
+1)series -> pd.series(["Argha","John","Mitchell"]). It is  1-dimentional. It takes a python list.
+2)DataFrame -> pd.DataFrame({"Car_makers": series, "Colour": colours}) .It is  2-dimentional. It takes a python dictionary. We can create them out of pandas series as well.

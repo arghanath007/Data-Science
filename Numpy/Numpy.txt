@@ -1,0 +1,8 @@
+1) The functionalities that numpy library offers are actually written in C programming language. So it will work extremely fast compared to python. Which is very much needed when doing complex compulation on larger datasets.
+    It is fast
+
+2) The idea of converting these data into something that a machine can understand like numbers(binary) which are in either zero or one. It allows us to make machine learn different operations. Machine learns by performing multiple operations.
+
+3)Numpy full form -> Numerical Python.
+
+No matter what type or what shape the numpy array is, all of the functions or the data manipulations will work if the data is stored in a 'numpy array' or in an 'numpy.ndarray'. 'numpy.ndarray' this is an universal datatype and it is very very flexible.

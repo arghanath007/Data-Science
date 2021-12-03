@@ -40,3 +40,35 @@ ReLU -> It also have 'Vanishing Gradients' problem when the values are less than
 CHAIN RULE:
 	
 	In back propogation algorithms, there is a forward pass as well as a backward pass. In the forward pass we get the value of loss and when we get the loss we back propogate to adjust the weights.
+    
+ 
+FOR THE DOG CLASS:(Where we were predicting which images are the images of the dog. We have 7 predictions for the dog class)
+
+PRECISION: 
+    For example, we are using a Dog classification problem, where we are prediciting if the image is an image of a Dog or not.
+        True Positive(TP)=4(This are the ones that the model predicted to be dog images and they were actually dog images i.e correct prediction by the model)
+        
+        False Positive(FP)=3(This are the ones that the model predicted to be dog images and they were not dog images i.e incorrect prediction by the model)
+    
+        Precision -> Precision is out of all the dog predictions, how many did the model got correct result?
+        Precision=4/7=0.57
+                 =TP/(TP+FP)
+                 
+         For precision, think about predictions as the base
+                 
+RECALL:
+    When we thing about Recall, we always think about truth as the baseline.
+    
+    Total Dog truth samples(FN)=6(This are the total count of dog images that were present in the dataset).
+    
+    Truth Positive(TP)=4(This are the ones that the model predicted to be dog images and they were actually dog images i.e correct prediction by the model)
+    
+    Recall -> Recall is out of all dog truth, how many you got it right.
+    
+    Recall=4/6=0.67
+          =TP/(TP+FN)
+          
+    For recall, think about truth as the base  
+    
+    
+FOR THE NOT DOG CLASS:(Where we were predicting which images are not the images of the dog. We had 3 predictions in the not dog class)

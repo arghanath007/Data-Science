@@ -1,0 +1,9 @@
+It is a plotting library and more specifically a python plotting library. It helps us to turn the data into some pretty visualizations also knows as plots or figures. 
+
+There are two types of way of plotting in matplotlib:-
+
+1)Pyplot API
+2)Object-oriented interface
+
+
+*** In general, try to use the object-oriented interface over the pyplot interface.

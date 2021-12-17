@@ -14,3 +14,4 @@ Object oriented API:-
 So the figure is the base canvas and the axes are like we're drawing on that base canvas.
 
 
+If we have access to the data doesn't mean we have the knowledge.

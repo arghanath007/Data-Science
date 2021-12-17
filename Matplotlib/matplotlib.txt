@@ -7,3 +7,10 @@ There are two types of way of plotting in matplotlib:-
 
 
 *** In general, try to use the object-oriented interface over the pyplot interface.
+
+
+Object oriented API:-
+
+So the figure is the base canvas and the axes are like we're drawing on that base canvas.
+
+

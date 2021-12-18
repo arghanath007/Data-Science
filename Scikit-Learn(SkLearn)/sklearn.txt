@@ -1,0 +1,1 @@
+Sklearn is a python machine learning library which means if we have data then sklearn helps us to build machine learning models to make predictions or learn patterns within that data and then make predictions. It also implements tools to help us evaluate those predictions wheather they are good or bad.

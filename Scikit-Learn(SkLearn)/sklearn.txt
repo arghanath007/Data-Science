@@ -1,1 +1,8 @@
 Sklearn is a python machine learning library which means if we have data then sklearn helps us to build machine learning models to make predictions or learn patterns within that data and then make predictions. It also implements tools to help us evaluate those predictions wheather they are good or bad.
+
+
+****Tid-bit in Machine learning:-
+
+1) If we have structured data i.e (tables or DataFrames) then use 'ensemble' methods such as the random forest algorithms. They will perform pretty well.
+
+2) If we have unstructured data(images, audio,text), use deep learning or transfer learning

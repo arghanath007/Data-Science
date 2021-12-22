@@ -6,3 +6,7 @@ Sklearn is a python machine learning library which means if we have data then sk
 1) If we have structured data i.e (tables or DataFrames) then use 'ensemble' methods such as the random forest algorithms. They will perform pretty well.
 
 2) If we have unstructured data(images, audio,text), use deep learning or transfer learning
+
+
+
+*** The Hyper-parameters gets tuned on the validation split.

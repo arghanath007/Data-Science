@@ -1,0 +1,8 @@
+Correlation Analysis simply means which attributes have correlations
+
+'Backward Attribute selection' says that train the model on all the attributes and then slowly, start taking away the attributes or the columns to train the model. Does it affect the model? Does it improve the model?
+
+'Forward Attribute selection' is the opposite of 'Backward' attribute selection. It says that just start with one column when training the model and keep adding one attribute at a time until we get the 'accuracy' to plateau i.e if we keep increasing columns and let's say after the fifteeth column all the other attributes that we added just don't improve the model. Well then maybe we might not need it.
+
+    **This is the idea of Correlation Analysis** -> The forward/backward attribute selection are all ways to test the model and reduce the amount of data, if we want to and play with the model instead of just assuming if we include everything, then everything will make the model better.
+

@@ -1,17 +1,3 @@
-company,job,degree,salary_more_then_100k
-google,sales executive,bachelors,0
-google,sales executive,masters,0
-google,business manager,bachelors,1
-google,business manager,masters,1
-google,computer programmer,bachelors,0
-google,computer programmer,masters,1
-abc pharma,sales executive,masters,0
-abc pharma,computer programmer,bachelors,0
-abc pharma,business manager,bachelors,0
-abc pharma,business manager,masters,1
-facebook,sales executive,bachelors,1
-facebook,sales executive,masters,1
-facebook,business manager,bachelors,1
-facebook,business manager,masters,1
-facebook,computer programmer,bachelors,1
-facebook,computer programmer,masters,1
+version https://git-lfs.github.com/spec/v1
+oid sha256:eafe38e48b6319e7d829b6439b0b27c62a97dad8477ccc221abbe42fd847e9d5
+size 638

@@ -1,25 +1,3 @@
-Name,Age,Income($)
-Rob,27,70000
-Michael,29,90000
-Mohan,29,61000
-Ismail,28,60000
-Kory,42,150000
-Gautam,39,155000
-David,41,160000
-Andrea,38,162000
-Brad,36,156000
-Angelina,35,130000
-Donald,37,137000
-Tom,26,45000
-Arnold,27,48000
-Jared,28,51000
-Stark,29,49500
-Ranbir,32,53000
-Dipika,40,65000
-Priyanka,41,63000
-Nick,43,64000
-Alia,39,80000
-Sid,41,82000
-Abdul,39,58000
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8efb03901db4af0d7ec2844a8f049f71ba0e036d5028079e04a1100e0af601a
+size 363

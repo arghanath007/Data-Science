@@ -1,7 +1,3 @@
-day,temperature,windspeed,event
-1/1/2017,32,6,Rain
-1/2/2017,35,7,Sunny
-1/3/2017,28,2,Snow
-1/4/2017,24,7,Snow
-1/5/2017,32,4,Rain
-1/6/2017,31,2,Sunny
+version https://git-lfs.github.com/spec/v1
+oid sha256:f576f3e3f136e90ca989ca9cc516156894790a3f6333ba069e0938007b601328
+size 155

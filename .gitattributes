@@ -1,3 +1,6 @@
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.xyz filter=lfs diff=lfs merge=lfs -text
 Deep[[:space:]]Learning/datasets/flower_photos.tar.gz filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text

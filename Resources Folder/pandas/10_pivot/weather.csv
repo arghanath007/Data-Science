@@ -1,10 +1,3 @@
-﻿date,city,temperature,humidity
-5/1/2017,new york,65,56
-5/2/2017,new york,66,58
-5/3/2017,new york,68,60
-5/1/2017,mumbai,75,80
-5/2/2017,mumbai,78,83
-5/3/2017,mumbai,82,85
-5/1/2017,beijing,80,26
-5/2/2017,beijing,77,30
-5/3/2017,beijing,79,35
+version https://git-lfs.github.com/spec/v1
+oid sha256:2543c00c21f1127fe8f60e7f35e7a1de1399b5d6d0881c514e7977eaad9aa3d0
+size 241

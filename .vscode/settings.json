@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["keras", "pdpbox", "preds", "pyplot"]
+  "cSpell.words": ["keras", "pdpbox", "preds", "pyplot"],
+  "jupyter.jupyterServerType": "local"
 }

@@ -1,0 +1,3 @@
+It is a deep learning or numerical computing library. Developed by Google. It is an open source library.
+
+It is used to build deep learning and neural network models to gain insights out of unstructured data. Deep learning is more suited to unstructured data(photos or audio waves or natural language text) that doesn't really have any specific strucuture. Tensorflow allows us to build a deep learning model exactly like a neural network.

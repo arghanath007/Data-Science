@@ -72,3 +72,21 @@ RECALL:
     
     
 FOR THE NOT DOG CLASS:(Where we were predicting which images are not the images of the dog. We had 3 predictions in the not dog class)
+
+** NEURAL NETWORKS***
+
+
+Neural networks are used to handle the variety in your inputs, such that it can classify those variety of inputs in a generic way. Here, the first part where we use convolutional convolution operation is 'feature extraction' part and the second part, where we are using dense neural network is called 'classification' because the first part is detecting all the features ears nose eyes head and body etc. The second part is responsible for 'classification'.
+
+Max pooling along with CNN helps with position invariant feature detection. Doesn't matter where the eyes or ears are in the image, it will detect that feature for us.
+
+Max pooling is more generally used but sometimes people use average pooling.
+
+The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ears) on its own and that is part of the training, so when the neural network(CNN) is training. We are supplying images,koala images here, and using that it will use back propagation and it will figure out the right amount of filters and it will figure out the values in these filters. This is all part of the learning or the back propagation.
+    As a hyper-parameter we want to specify how many filters we want and what is the size of each of those filters, that's it. We do not specify the exact values within these filters, the network will learn those on it's own. 
+
+
+** Difference between 'sparse_categorical_crossentropy' and 'categorical_crossentropy':-
+
+-> When we have 'y' values as 'one hot encoded vector', we will use 'categorical_crossentropy'.
+-> If we have 'y' directly as a value(y=8) then, we will use 'sparse_categorical_crossentropy'.

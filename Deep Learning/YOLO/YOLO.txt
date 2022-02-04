@@ -1,0 +1,3 @@
+YOLO -> You Only Look Once.
+
+Non max suppression.

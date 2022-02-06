@@ -1,0 +1,39 @@
+CNN is mainly used for image processing
+RNN fullform is Recurrent Neural Network(Link -> https://www.youtube.com/watch?v=Y2wfIKQyd1I&list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO&index=33)
+
+RNN is mainly used for Natural Language Processing or NLP. It is also used in Named Entity Recognition (NER).
+
+Language is all about sequence. If we change the sequence, the meaning changes.
+
+Types of RNN:- (Link -> https://www.youtube.com/watch?v=EzsXi4WzelI&list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO&index=34)
+
+    Named Entity Recognition (NER) -> Given a statement, we can tag each of the word whether it's a person or not. This is an example of 'Many to Many' RNN, as we have Many inputs or 'X' and have many outputs or 'Y'.
+
+    Language Translation -> Given a statement, we can translate it into another language. This is an example of 'Many to Many' RNN, as we have Many inputs or 'X' and Many output or 'Y'.
+
+    Sentiment Analysis -> Given a text of productivity, we can saw that it is one star or two star. This is an example of 'Many to One' RNN, as we have Many inputs or 'X' and One output or 'Y'.
+
+    Music Generation -> We can pass a sample node or like a seed node and then we can ask RNN to produce a music melody. RNN can sing a song or even poetry writing by feeding it with a single word or a seed word and RNN can write a poem with it(word). This is a case of 'One to Many' RNN, as we have One input(one music node) or 'X' and Many output or 'Y'.
+
+
+Vanishing Gradient:-
+
+-> Traditional/Basic RNN are said to suffer from short term memory, as we pass through more words the impact of the earlier words is reduced. This is way they have a short memory. This is the impact of vanishing gradient.
+
+    The solution for vanishing gradient are 'GRU' and 'LSTM'. These are special types/versions of RNN or neural networks which addresses the problem of short term memory.
+
+LSTM:-(Link -> https://www.youtube.com/watch?v=LfnrRPFhkuY&list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO&index=36)
+
+-> It is a special version of RNN  which addresses the problem of short term memory. We are going to introduce a new cell state which is for long term memory.
+
+GRU:- (Link -> https://www.youtube.com/watch?v=tOuXgORsXJ4&list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO&index=37)
+
+-> GRU stands for 'Gated Recurrent Unit'. It is newer than LSTM. GRI is a modified or a lightweight version of LSTM, where it combines it's long and short term memory into it's hidden state. It has two gates:-
+    1. Reset gate -> How much of past memory to forget.
+    2. Update gate -> How much of past memory to remember/retain.
+
+    Difference between GRU and LSTM:-
+
+        1)'LSTM' has 'two' states, one for 'long term memory' and one for 'short term memory'. 'GRU' has only 'one' state, which is the 'hidden state', which can combine both 'long' and 'short' term memory.
+        
+        2)'LSTM' has 'three' gates, one for 'input gate' and one for 'forget gate' and one for 'output gate'. 'GRU' has only 'two' gate, one is 'update gate' and one is 'reset gate'.

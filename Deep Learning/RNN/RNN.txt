@@ -55,3 +55,16 @@ Word Embedding Calculation:-
 How Keras's Embedding layer works:-
 
 -> During the process of solving the NLP task, it(Embedding layer) will compute the embeddings on the fly.
+
+
+Word2Vec:-(Convert a word to a vector)
+
+-> It is not a single method but it could be using one of the two techniques which is either 'continuous bag of words' or 'skip-gram' to learn word embeddings. 
+
+        1)Continuous bag of words:- 
+
+            ->The word embedding is a layer between the hidden layer and the output layer.
+
+        2)Skip-Gram:-
+
+            -> The word embedding is a layer between the input layer and the hidden layer

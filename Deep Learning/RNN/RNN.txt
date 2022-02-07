@@ -30,10 +30,28 @@ GRU:- (Link -> https://www.youtube.com/watch?v=tOuXgORsXJ4&list=PLeo1K3hjS3uu7Cx
 
 -> GRU stands for 'Gated Recurrent Unit'. It is newer than LSTM. GRI is a modified or a lightweight version of LSTM, where it combines it's long and short term memory into it's hidden state. It has two gates:-
     1. Reset gate -> How much of past memory to forget.
-    2. Update gate -> How much of past memory to remember/retain.
+    2. Update gate -> How much of past memory to remember/r etain.
 
     Difference between GRU and LSTM:-
 
         1)'LSTM' has 'two' states, one for 'long term memory' and one for 'short term memory'. 'GRU' has only 'one' state, which is the 'hidden state', which can combine both 'long' and 'short' term memory.
         
         2)'LSTM' has 'three' gates, one for 'input gate' and one for 'forget gate' and one for 'output gate'. 'GRU' has only 'two' gate, one is 'update gate' and one is 'reset gate'.
+
+
+Word Embedding:-
+
+-> It allows us to capture the relationship between the two words. How do we capture the similarity between the two words?
+
+    So we found the feature vectors for the words and that could be very effective to solve a variety of problems in NLP tasks. So, this is basically word embedding. It is a technique which is used to represent the words in a vector space or in a feature vector format(refer the images). We use ML to convert words into feature vectors and these vectors are again feed into the RNN, then we solve a variety of problems like 'Sentiment classification' or 'Named Entity classification' and various NLP problems.
+
+
+Word Embedding Calculation:- 
+
+1) Supervised Learning:-
+2) Self Supervised Learning(Word2Vec and Glove) :-
+
+
+How Keras's Embedding layer works:-
+
+-> During the process of solving the NLP task, it(Embedding layer) will compute the embeddings on the fly.

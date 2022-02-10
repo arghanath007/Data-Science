@@ -1,0 +1,38 @@
+BERT is used in NLP tasks. It is based on a transformer architecture.
+    Two types of 'BERT':-
+        1. BERT BASE: BERT base model with 12 encoder layers.
+        2. BERT LARGE: BERT large model with 24 encoder layers.
+
+BERT -> Bidirectional Encoder Representations from Transformers.
+
+Link -> https://jalammar.github.io/illustrated-bert/
+
+** How can we capture the similarities between two words? **
+
+-> If we have two homes, how would we find out if they are similar? We look at the features of the homes like 'Bedrooms', 'Area', 'Bathrooms'.
+
+    If for an object which is a 'home' here, if we can derive the features then by comparing those features we can say if those two objects are similar or not.
+
+
+Issue with Word2Vec:
+
+-> We need a model which can generate contextualized meaning of a word, which means we can look at a whole sentence and based on that we can generate the number representation for a word. 
+    'BERT' allows us to do this exact same thing. It will generate contextualized embeddings which means when we have to two sentences and the same word in those two sentences have a different meaning, then 'BERT' will generate two different meaning for that same word.
+         It will capture the meaning of a word in a right way so that when we have two different words but they have the same meaning, then it will generate similar embeddings. 
+
+    'BERT' is very powerful and it can look at the context of the statement and generate the meaningful number representation for a given word.
+
+    'BERT' can generate embeddings for an entire sentence. It will usually generate a vector of size 768 length.
+
+
+** BERT Working **
+
+-> It always puts a special token called '[CLS]' at the beginning of the sentence and to separate two sentences it will put a special token called as separator or '[SEP]'.
+
+Example:-
+Sentence -> nice movie indeed
+
+input mask of the above sentence  -> CLS nice movie indeed SEP.
+
+
+*** The purpose of BERT is to generate an embedding vector for the entire sentence.

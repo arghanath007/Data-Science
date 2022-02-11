@@ -1,0 +1,19 @@
+Edge devices are micro-controllers, fitbits, Arduino, small devices etc.
+
+Quantization is basically converting all the numbers which requires more bytes to store each individual number into let's say 'int'. So it's not always 'int'. Sometimes we are converting from float64 which is 8bytes to float16 which is 2bytes.
+
+    We are not blindly converting the weights into numbers. There is an algorithm we need to apply.
+
+    On a higher level, we are basically reducing the precision and each of the individual weights we want to store them in maybe int8 or float16, so that overall size of the model can be reduced.
+
+Benefits:-
+
+* Deploy the model on a microcontroller.
+* Prediction time is much faster.
+
+
+2 ways of Quantization:-
+
+* Post Training Quantization -> Faster but accuracy might suffer.
+
+* Quantization Aware Training -> Better approach than Post Training Quantization. Little more work but good accuracy.

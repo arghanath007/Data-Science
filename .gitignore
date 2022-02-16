@@ -6,6 +6,10 @@ Bulldozer_price_prediction(Regression)/datasets/bluebook-for-bulldozers
 
 PlantVillage
 
+Potato_Disease_Classification/venv
+
+# Paths to the Tomato Datasets.
+
 Tomato_Disease_Classification/Dataset/Tomato__Target_Spot
 Tomato_Disease_Classification/Dataset/Tomato__Tomato_mosaic_virus
 Tomato_Disease_Classification/Dataset/Tomato__Tomato_YellowLeaf__Curl_Virus

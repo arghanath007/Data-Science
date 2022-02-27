@@ -1,0 +1,14 @@
+ANN ->
+
+
+Machine Learning Drawback-> Relationship/expression between input and output.
+
+LSTM -> Combination of RNN and CNN.
+
+netron.app -> Deep learning model visualization.
+
+
+
+
+
+College has opened and normal classes are happening and they are asking for attendance in classes. I said to them that I am doing an internship and won't be able to join the classes. They are saying that if I want to get the attendence then the job I am working for has to submit an noc request. 

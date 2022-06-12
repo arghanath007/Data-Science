@@ -1,0 +1,28 @@
+1)Dictionary, tuple,lists
+Functions
+Read,write files
+Modules
+
+2) Exception handling, Classes, Object, Inheritance, Iterators, Generators, List/dict comprehension, Sets, command line argparse.
+
+3) Multithreading, Multiprocessing, Multiprocessing lock and pool, Unit tests:pytest, Decorators, Context Managers.
+
+4) Data Structure and Algorithms.
+
+5) Debugging Skills.
+
+<=======================================================================>
+
+**Dictionary allows us to store key, value pairs.
+
+dict={
+    'joe': 'cool',
+    'bob': 'not cool',
+    'putin': 'insane',
+}
+
+**Tuple is a list of values grouped together. It is immutable.
+
+point=(5,9)
+
+point[0], point[1]

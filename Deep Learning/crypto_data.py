@@ -227,3 +227,10 @@ history = model.fit(
     callbacks=[tensorboard, checkpoint],
 )
 
+
+# Score model
+score = model.evaluate(validation_x, validation_y, verbose=0)
+print('Test loss:', score[0])
+print('Test accuracy:', score[1])
+# Save model
+model.save("models/{}".format(NAME))

@@ -1,4 +1,14 @@
 {
-  "cSpell.words": ["keras", "pdpbox", "preds", "pyplot"],
+  "cSpell.words": [
+    "Alexa",
+    "Fasttext",
+    "keras",
+    "Lemmatization",
+    "pdpbox",
+    "preds",
+    "Pretrained",
+    "pyplot",
+    "TFIDF"
+  ],
   "jupyter.jupyterServerType": "local"
 }

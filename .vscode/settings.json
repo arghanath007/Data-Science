@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
     "Alexa",
+    "DSLR",
     "Fasttext",
     "keras",
     "Lemmatization",
@@ -8,6 +9,7 @@
     "preds",
     "Pretrained",
     "pyplot",
+    "Spacy",
     "TFIDF"
   ],
   "jupyter.jupyterServerType": "local"

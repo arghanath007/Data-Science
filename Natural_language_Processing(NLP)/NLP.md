@@ -84,3 +84,10 @@ Link -> https://regex101.com/
 Link -> https://www.youtube.com/watch?v=h2kBNEShsiE&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=7
 
 Need to learn -> **Cosine similarity.**
+
+
+## NLP Libraries
+
+1) Spacy -> Object Oriented NLP Library. This out of the box gives us the best algorithm, best option and it works. It is like the camera of a smartphone.
+
+2) NLTK -> String Processing Library. It is like a DSLR manual camera, which we need to tweak to get the full potential of this powerful library.

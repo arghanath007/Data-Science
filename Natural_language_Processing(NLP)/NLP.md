@@ -79,9 +79,9 @@ Link -> https://regex101.com/
 
 
 
-**Currently watching - Part 7**
+**Currently watching - Part 9**
 
-Link -> https://www.youtube.com/watch?v=h2kBNEShsiE&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=7
+Link -> https://www.youtube.com/watch?v=hKK59rfpXL0&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=9
 
 Need to learn -> **Cosine similarity.**
 

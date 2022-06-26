@@ -5,6 +5,7 @@
     "Fasttext",
     "keras",
     "Lemmatization",
+    "NLTK",
     "pdpbox",
     "preds",
     "Pretrained",

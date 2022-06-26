@@ -79,11 +79,24 @@ Link -> https://regex101.com/
 
 
 
-**Currently watching - Part 11**
-
-Link -> https://www.youtube.com/watch?v=gdHWoQWZGkk&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=11
 
 Need to learn -> **Cosine similarity.**
+
+
+## NER(Named Entity Recognition)
+
+**Use Cases**
+
+1) Search -> Latest News
+2) Recommendations -> Recommendations from previous search history.
+3) Customer Care Service.
+
+
+### Build own NER
+
+1) Simple Lookup Table with hardcoded values.
+2) Rule Based NER (Like in Spacy)
+3) Machine Learning (CRF and BERT)  CRF -> Conditional Random Field
 
 
 ## NLP Libraries
@@ -91,3 +104,14 @@ Need to learn -> **Cosine similarity.**
 1) Spacy -> Object Oriented NLP Library. This out of the box gives us the best algorithm, best option and it works. It is like the camera of a smartphone.
 
 2) NLTK -> String Processing Library. It is like a DSLR manual camera, which we need to tweak to get the full potential of this powerful library.
+
+
+
+
+
+**Currently watching - Part 12**
+
+Link -> https://www.youtube.com/watch?v=2XUhKpH0p4M&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=13
+
+
+> Waiting for new videos to be uploaded.

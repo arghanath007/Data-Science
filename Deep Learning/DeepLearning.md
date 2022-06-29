@@ -1,5 +1,17 @@
 ***To Open Anaconda Navigator on Linux run 'anaconda-navigator' in the terminal.***
 
+# Motto of Deep Learning or AI in general
+
+> If in doubt, run the code.
+## Explore and experiment
+
+> Experiment, Experiment and lots of experiments.
+> Visualize, Visualize and lots of visualizations.(Recreate things in ways we can understand them)
+> Ask questions and ask lots of questions.(Even dumb questions)
+> Share your work, and try explaining it to someone else.
+
+
+
 ## Why Deep Learning?
 
 1) For a given complex problem, it is probably not possible to think of all the possible rules for it. 
@@ -97,6 +109,13 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 >When we have 'y' values as 'one hot encoded vector', we will use 'categorical_crossentropy'.
 
 >If we have 'y' directly as a value(y=8) then, we will use 'sparse_categorical_crossentropy'.
+
+
+## Tensor
+
+> It is a way to represent some sort of data in numerical form.
+
+
 
 
 # Tensorflow Certification Course

@@ -122,5 +122,5 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 2. Deep Learning and TensorFlow Fundamentals(Folder)
 
-> Watched Till Video 5
+> Watched Till Video 14
 

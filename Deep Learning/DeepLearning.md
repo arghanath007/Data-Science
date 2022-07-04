@@ -120,7 +120,10 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 # Tensorflow Certification Course
 
-> 2. Deep Learning and TensorFlow Fundamentals(Folder)
+> 2. Deep Learning and TensorFlow Fundamentals(Completed)
 
-> Watched Till Video 14
+
+> 3. Neural network regression with TensorFlow(Continue)
+
+> Start from Video 1
 

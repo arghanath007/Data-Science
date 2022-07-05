@@ -125,5 +125,5 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 3. Neural network regression with TensorFlow(Continue)
 
-> Start from Video 1
+> Start from Video 5
 

@@ -116,6 +116,15 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 > It is a way to represent some sort of data in numerical form.
 
 
+## Neural Network
+
+### Model Training
+
+#### Improving a model
+
+> "Learning_rate" or 'lr' is potentially the most important hyper-parameter that we can change in the training of a neural network. It is the most important hyper-parameter of many different neural networks.
+
+
 
 
 # Tensorflow Certification Course
@@ -125,5 +134,5 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 3. Neural network regression with TensorFlow(Continue)
 
-> Start from Video 5
+> Start from Video 8
 

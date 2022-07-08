@@ -118,11 +118,25 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 ## Neural Network
 
+**Typical Workflow in building a model**
+
+> Build a model -> fit the model -> evaluate the model -> tweak the model -> fit it -> evaluate it ->  tweak it -> fit it -> evaluate it -> repeat...
+
+
+### Building a model
+
+> Experiment, Experiment, Experiment
+
 ### Model Training
 
 #### Improving a model
 
 > "Learning_rate" or 'lr' is potentially the most important hyper-parameter that we can change in the training of a neural network. It is the most important hyper-parameter of many different neural networks.
+
+
+### Evaluating a model
+
+> Visualize, Visualize, Visualize
 
 
 
@@ -134,5 +148,5 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 3. Neural network regression with TensorFlow(Continue)
 
-> Start from Video 8
+> Start from Video 12
 

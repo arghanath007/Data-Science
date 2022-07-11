@@ -145,8 +145,9 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 2. Deep Learning and TensorFlow Fundamentals(Completed)
 
+> 3. Neural network regression with TensorFlow(Completed)
 
-> 3. Neural network regression with TensorFlow(Continue)
+> 4. Neural network classification in TensorFlow
 
-> Start from Video 23
+> Start from Video 2
 

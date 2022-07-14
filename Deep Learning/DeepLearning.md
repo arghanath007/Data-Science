@@ -149,5 +149,5 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 4. Neural network classification in TensorFlow
 
-> Start from Video 2
+> Start from Video 5
 

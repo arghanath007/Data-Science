@@ -62,8 +62,13 @@ ReLU(z)=max(0,x).
  
 >FOR THE DOG CLASS:(Where we were predicting which images are the images of the dog. We have 7 predictions for the dog class)
 
+
+**Important**
+
+> There evaluation metrics such as *precision*, *recall*, *accuracy*, *f1-score*, *Confusion matrix*, *classification report* are the evaluation metrics of a classification problem.
+
 ## PRECISION: 
-    For example, we are using a Dog classification problem, where we are prediciting if the image is an image of a Dog or not.
+    For example, we are using a Dog classification problem, where we are predicting if the image is an image of a Dog or not.
         True Positive(TP)=4(This are the ones that the model predicted to be dog images and they were actually dog images i.e correct prediction by the model)
         
         False Positive(FP)=3(This are the ones that the model predicted to be dog images and they were not dog images i.e incorrect prediction by the model)
@@ -72,7 +77,7 @@ ReLU(z)=max(0,x).
         Precision=4/7=0.57
                  =TP/(TP+FP)
                  
-         For precision, think about predictions as the base
+        For precision, think about predictions as the base
                  
 ## RECALL:
     When we thing about Recall, we always think about truth as the baseline.
@@ -90,6 +95,11 @@ ReLU(z)=max(0,x).
     
     
 FOR THE NOT DOG CLASS:(Where we were predicting which images are not the images of the dog. We had 3 predictions in the not dog class)
+
+
+## Precision/recall tradeoff
+
+> We can't have both precision and recall high. If we *increase precision*, it will *reduce recall* and vice versa. This is called the precision/recall tradeoff.
 
 ## NEURAL NETWORKS
 
@@ -115,15 +125,14 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > It is a way to represent some sort of data in numerical form.
 
-
-## Neural Network
+## Building a model
 
 **Typical Workflow in building a model**
 
 > Build a model -> fit the model -> evaluate the model -> tweak the model -> fit it -> evaluate it ->  tweak it -> fit it -> evaluate it -> repeat...
 
 
-### Building a model
+### Steps to build a model
 
 > Experiment, Experiment, Experiment
 
@@ -149,5 +158,5 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 4. Neural network classification in TensorFlow
 
-> Start from Video 19
+> Start from Video 26
 

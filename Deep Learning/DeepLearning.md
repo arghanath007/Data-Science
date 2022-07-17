@@ -116,9 +116,9 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 ## Difference between 'sparse_categorical_crossentropy' and 'categorical_crossentropy':-
 
->When we have 'y' values as 'one hot encoded vector', we will use 'categorical_crossentropy'.
+>When we have 'y' or *labels* values as *one hot encoded vector*, we will use 'categorical_crossentropy'.
 
->If we have 'y' directly as a value(y=8) then, we will use 'sparse_categorical_crossentropy'.
+>If we have 'y' or *labels* directly as a value(y=8) in *integer* format then, we will use 'sparse_categorical_crossentropy'.
 
 
 ## Tensor

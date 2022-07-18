@@ -121,6 +121,13 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 >If we have 'y' or *labels* directly as a value(y=8) in *integer* format then, we will use 'sparse_categorical_crossentropy'.
 
 
+**IMPORTANT**
+
+> We have to use *SparseCategoricalCrossentropy()* as the loss function instead of *CategoricalCrossentropy* because the labels(y values) are in *integer* format and not *one-hot-encoded*. 
+
+> If the labels were *one-hot-encoded* then we could have used the *CategoricalCrossentropy* as the loss function here.
+
+
 ## Tensor
 
 > It is a way to represent some sort of data in numerical form.
@@ -156,7 +163,9 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 3. Neural network regression with TensorFlow(Completed)
 
-> 4. Neural network classification in TensorFlow
+> 4. Neural network classification in TensorFlow(Completed)
 
-> Start from Video 26
+> 5. Computer Vision and Convolutional Neural Networks in TensorFlow
+
+> Start with Video 1
 

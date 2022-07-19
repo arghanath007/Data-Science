@@ -1,9 +1,17 @@
+# Deep Learning
+
 ***To Open Anaconda Navigator on Linux run 'anaconda-navigator' in the terminal.***
 
-# Motto of Deep Learning or AI in general
+## Why Deep Learning?
+
+1) For a given complex problem, it is probably not possible to think of all the possible rules for it. 
+    **Example**: When we are trying to teach a self-driving car to drive. We have to think of all the rules we have to code here for it to work.
+
+## Motto of Deep Learning or AI in general
 
 > If in doubt, run the code.
-## Explore and experiment
+
+### Explore and experiment
 
 > Experiment, Experiment and lots of experiments.
 > Visualize, Visualize and lots of visualizations.(Recreate things in ways we can understand them)
@@ -12,10 +20,7 @@
 
 
 
-## Why Deep Learning?
 
-1) For a given complex problem, it is probably not possible to think of all the possible rules for it. 
-    **Example**: When we are trying to teach a self-driving car to drive. We have to think of all the rules we have to code here for it to work.
 
 **We can think of Logistic Regression as a simple single neuron.***
 >The input parameter or the independent variable is called a feature in the Machine Learning terminology. 'Age' is the independent variable here.
@@ -37,7 +42,9 @@ model=keras.Sequential([
 >The complex problems cannot be solved by linear equations. The patterns we see in the universe cannot be explained by linear equations all the time, that's why we need non-linear equations and the 'activation' function will help us build that non-linear equation.
 
 
-**GENERAL GUIDE LINE for ACTIVATION FUNCTIONS**  -> Use 'sigmoid' in output layer. All other places try to use 'tanh' if possible. 'tanh' will canculate a mean of '0' and it will center the data so it is useful.
+**GENERAL GUIDE LINE for ACTIVATION FUNCTIONS**  
+
+>Use 'sigmoid' in output layer. All other places try to use 'tanh' if possible. 'tanh' will calculate a *mean* of '0' and it will center the data so it is useful.
 
 ## Issues with sigmoid and tanh:-
 
@@ -60,8 +67,78 @@ ReLU(z)=max(0,x).
 	In back propogation algorithms, there is a forward pass as well as a backward pass. In the forward pass we get the value of loss and when we get the loss we back propogate to adjust the weights.
     
  
->FOR THE DOG CLASS:(Where we were predicting which images are the images of the dog. We have 7 predictions for the dog class)
+*FOR THE DOG CLASS*:
+>(Where we were predicting which images are the images of the dog. We have 7 predictions for the dog class)
 
+# NEURAL NETWORKS
+
+## Tensor
+
+> It is a way to represent some sort of data in numerical form.
+
+## Building a model
+
+**Typical Workflow in building a model**
+
+> Build a model -> fit the model -> evaluate the model -> tweak the model -> fit it -> evaluate it ->  tweak it -> fit it -> evaluate it -> repeat...
+
+
+### Steps to build a model
+
+> Experiment, Experiment, Experiment
+
+### Model Training
+
+#### Improving a model
+
+> "Learning_rate" or 'lr' is potentially the most important hyper-parameter that we can change in the training of a neural network. It is the most important hyper-parameter of many different neural networks.
+
+
+### Evaluating a model
+
+> Visualize, Visualize, Visualize
+
+**Neural Network** 
+
+> Link(1) -> https://www.youtube.com/watch?v=aircAruvnKk
+
+> Gradient Descent(2) -> https://www.youtube.com/watch?v=IHZwWFHWa-w
+
+> Back-propagation(3) -> https://www.youtube.com/watch?v=Ilg3gGewQ5U
+
+Neural networks are used to handle the variety in your inputs, such that it can classify those variety of inputs in a generic way. Here, the first part where we use convolutional convolution operation is 'feature extraction' part and the second part, where we are using dense neural network is called 'classification' because the first part is detecting all the features ears nose eyes head and body etc. The second part is responsible for 'classification'.
+
+Max pooling along with CNN helps with position invariant feature detection. Doesn't matter where the eyes or ears are in the image, it will detect that feature for us.
+
+Max pooling is more generally used but sometimes people use average pooling.
+
+The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ears) on its own and that is part of the training, so when the neural network(CNN) is training. We are supplying images,koala images here, and using that it will use back propagation and it will figure out the right amount of filters and it will figure out the values in these filters. This is all part of the learning or the back propagation.
+    As a hyper-parameter we want to specify how many filters we want and what is the size of each of those filters, that's it. We do not specify the exact values within these filters, the network will learn those on it's own.
+
+
+
+## Weights and Biases
+
+> Weights and biases are present within the layers of the neural network.
+
+### Weights
+
+> It tells us what pixel pattern the neuron on the next layer is picking up.
+
+### Biases
+
+> It tells us how high the weighted sum needs to be before the neuron starts getting meaningfully active.
+
+
+
+## Back-propagation
+
+> It is the algorithm for determining how a single training example would like to nudge the weights and biases of the neural network.
+
+
+
+
+# Classification Problem
 
 **Important**
 
@@ -94,57 +171,20 @@ ReLU(z)=max(0,x).
     For recall, think about truth as the base  
     
     
-FOR THE NOT DOG CLASS:(Where we were predicting which images are not the images of the dog. We had 3 predictions in the not dog class)
+*FOR THE NOT DOG CLASS*:
+
+>(Where we were predicting which images are not the images of the dog. We had 3 predictions in the not dog class)
 
 
 ## Precision/recall tradeoff
 
 > We can't have both precision and recall high. If we *increase precision*, it will *reduce recall* and vice versa. This is called the precision/recall tradeoff.
 
-## NEURAL NETWORKS
-
-**Neural Network** 
-
-> Link(1) -> https://www.youtube.com/watch?v=aircAruvnKk
-
-> Gradient Descent(2) -> https://www.youtube.com/watch?v=IHZwWFHWa-w
-
-> Back-propagation(3) -> https://www.youtube.com/watch?v=Ilg3gGewQ5U
-
-Neural networks are used to handle the variety in your inputs, such that it can classify those variety of inputs in a generic way. Here, the first part where we use convolutional convolution operation is 'feature extraction' part and the second part, where we are using dense neural network is called 'classification' because the first part is detecting all the features ears nose eyes head and body etc. The second part is responsible for 'classification'.
-
-Max pooling along with CNN helps with position invariant feature detection. Doesn't matter where the eyes or ears are in the image, it will detect that feature for us.
-
-Max pooling is more generally used but sometimes people use average pooling.
-
-The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ears) on its own and that is part of the training, so when the neural network(CNN) is training. We are supplying images,koala images here, and using that it will use back propagation and it will figure out the right amount of filters and it will figure out the values in these filters. This is all part of the learning or the back propagation.
-    As a hyper-parameter we want to specify how many filters we want and what is the size of each of those filters, that's it. We do not specify the exact values within these filters, the network will learn those on it's own. 
-
-
-
-## Back-propagation
-
-> It is the algorithm for determining how a single training example would like to nudge the weights and biases of the neural network.
-
-
 ## Difference between 'sparse_categorical_crossentropy' and 'categorical_crossentropy':-
 
 >When we have 'y' or *labels* values as *one hot encoded vector*, we will use 'categorical_crossentropy'.
 
 >If we have 'y' or *labels* directly as a value(y=8) in *integer* format then, we will use 'sparse_categorical_crossentropy'.
-
-
-## Weights and Biases
-
-> Weights and biases are present within the layers of the neural network.
-
-### Weights
-
-> It tells us what pixel pattern the neuron on the next layer is picking up.
-
-### Biases
-
-> It tells us how high the weighted sum needs to be before the neuron starts getting meaningfully active.
 
 
 **IMPORTANT**
@@ -154,31 +194,19 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 > If the labels were *one-hot-encoded* then we could have used the *CategoricalCrossentropy* as the loss function here.
 
 
-## Tensor
 
-> It is a way to represent some sort of data in numerical form.
-
-## Building a model
-
-**Typical Workflow in building a model**
-
-> Build a model -> fit the model -> evaluate the model -> tweak the model -> fit it -> evaluate it ->  tweak it -> fit it -> evaluate it -> repeat...
+# Regression Problem
 
 
-### Steps to build a model
-
-> Experiment, Experiment, Experiment
-
-### Model Training
-
-#### Improving a model
-
-> "Learning_rate" or 'lr' is potentially the most important hyper-parameter that we can change in the training of a neural network. It is the most important hyper-parameter of many different neural networks.
 
 
-### Evaluating a model
 
-> Visualize, Visualize, Visualize
+
+
+
+
+
+
 
 
 
@@ -194,4 +222,6 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 > 5. Computer Vision and Convolutional Neural Networks in TensorFlow
 
 > Start with Video 1
+
+
 

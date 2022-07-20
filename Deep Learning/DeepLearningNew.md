@@ -205,7 +205,19 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 
 
+# Computer Vision
 
+## Definition
+
+> It is the practice of writing algorithms which can discover patterns in visual data. Such as the camera of a self-driving car recognizing the car in front.
+
+### Example
+
+> Teaching Computers to see. Data from a *webcam* or *camera* from a car or a *security camera*.
+
+## Computer Vision Problem
+
+> Anywhere we want a computer to figure out something or understand what's going on a visual scene.
 
 
 
@@ -221,7 +233,7 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 5. Computer Vision and Convolutional Neural Networks in TensorFlow
 
-> Start with Video 1
+> Start with Video 4
 
 
 

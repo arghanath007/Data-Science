@@ -219,6 +219,10 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > Anywhere we want a computer to figure out something or understand what's going on a visual scene.
 
+## Convolutional Neural Network (CNN)
+
+> Link -> https://poloclub.github.io/cnn-explainer/
+
 
 
 
@@ -233,7 +237,7 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 5. Computer Vision and Convolutional Neural Networks in TensorFlow
 
-> Start with Video 4
+> Start with Video 12
 
 
 

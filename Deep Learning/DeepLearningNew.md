@@ -237,7 +237,7 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 5. Computer Vision and Convolutional Neural Networks in TensorFlow
 
-> Start with Video 12
+> Start with Video 18
 
 
 

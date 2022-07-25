@@ -224,6 +224,30 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 > Link -> https://poloclub.github.io/cnn-explainer/
 
 
+# Transfer Learning
+
+> It is taking what one model had learned in a similar domain in which we are working and apply to our specific use case/need.
+
+> It is leveraging a working model's existing architecture and learned patters for out problem.
+
+
+## Types Of Transfer Learning
+
+> **"As is" transfer learning** is when you take a pretrained model as it is and apply it to your task without any changes.
+
+    For example, many computer vision models are pretrained on the ImageNet dataset which contains 1000 different classes of images. This means passing a single image to this model will produce 1000 different prediction probability values (1 for each class).
+
+    This is helpful if you have 1000 classes of image you'd like to classify and they're all the same as the ImageNet classes, however, it's not helpful if you want to classify only a small subset of classes (such as 10 different kinds of food). Model's with "/classification" in their name on TensorFlow Hub provide this kind of functionality.
+
+> **Feature extraction transfer learning** is when you take the underlying patterns (also called weights) a pretrained model has learned and adjust its outputs to be more suited to your problem.
+
+    For example, say the pretrained model you were using had 236 different layers (EfficientNetB0 has 236 layers), but the top layer outputs 1000 classes because it was pretrained on ImageNet. To adjust this to your own problem, you might remove the original activation layer and replace it with your own but with the right number of output classes. The important part here is that only the top few layers become trainable, the rest remain frozen.
+    This way all the underlying patterns remain in the rest of the layers and you can utilize them for your own problem. This kind of transfer learning is very helpful when your data is similar to the data a model has been pretrained on.
+
+> **Fine-tuning transfer learning** is when you take the underlying patterns (also called weights) of a pretrained model and adjust (fine-tune) them to your own problem.
+
+
+
 
 
 
@@ -239,7 +263,7 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 6. Transfer Learning in TensorFlow Part 1 Feature extraction
 
-> Video -> 1
+> Next Video -> 10
 
 
 

@@ -261,9 +261,12 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 5. Computer Vision and Convolutional Neural Networks in TensorFlow(Completed)
 
-> 6. Transfer Learning in TensorFlow Part 1 Feature extraction
+> 6. Transfer Learning in TensorFlow Part 1 Feature extraction(Completed)
 
-> Next Video -> 10
+> 7. Transfer Learning in TensorFlow Part 2 Fine tuning
+
+> Video 1
+
 
 
 

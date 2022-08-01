@@ -1,16 +1,16 @@
 ## Some of the useful functions that are needed regularly.
 
 import tensorflow as tf
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+# import numpy as np
+# import pandas as pd
+# import matplotlib.pyplot as plt
 
 # %matplotlib inline
 
-from tensorflow import keras
-from tensorflow.keras import layers
-from tensorflow.keras.layers.experimental import preprocessing
-from tensorflow.keras.applications.efficientnet import EfficientNetB0
+# from tensorflow import keras
+# from tensorflow.keras import layers
+# from tensorflow.keras.layers.experimental import preprocessing
+# from tensorflow.keras.applications.efficientnet import EfficientNetB0
 
 
 # Create a function to import an image and resize it to be able to be used with our model
@@ -325,12 +325,12 @@ def create_data_augmented_layer_for_model(RandomFlip, RandomRotation, RandomZoom
   """
   
   # Create a data augmentation layer
-  data_augmentation_layer= keras.Sequential([
-    preprocessing.RandomFlip(RandomFlip),
-    preprocessing.RandomRotation(RandomRotation),
-    preprocessing.RandomZoom(RandomZoom),
-    preprocessing.RandomHeight(RandomHeight),
-    preprocessing.RandomWidth(RandomWidth)
+  data_augmentation_layer= tf.keras.Sequential([
+    tf.keras.layers.experimental.preprocessing.RandomFlip(RandomFlip),
+    tf.keras.layers.experimental.preprocessing.RandomRotation(RandomRotation),
+    tf.keras.layers.experimental.preprocessing.RandomZoom(RandomZoom),
+    tf.keras.layers.experimental.preprocessing.RandomHeight(RandomHeight),
+    tf.keras.layers.experimental.preprocessing.RandomWidth(RandomWidth)
   ], name="data_augmentation_layer")
   
   return data_augmentation_layer

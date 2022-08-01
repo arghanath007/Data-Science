@@ -1,17 +1,6 @@
 ## Some of the useful functions that are needed regularly.
 
 import tensorflow as tf
-# import numpy as np
-# import pandas as pd
-# import matplotlib.pyplot as plt
-
-# %matplotlib inline
-
-# from tensorflow import keras
-# from tensorflow.keras import layers
-# from tensorflow.keras.layers.experimental import preprocessing
-# from tensorflow.keras.applications.efficientnet import EfficientNetB0
-
 
 # Create a function to import an image and resize it to be able to be used with our model
 def load_and_prep_image(filename, img_shape=224, scale=True):
@@ -307,7 +296,7 @@ def model_check_point_callback(file_path, save_weights_only, save_best_only):
         save_best_only: boolean, if True, the latest best model according to the quantity monitored will not be overwritten.
     Returns:
         ModelCheckpoint callback.
-    """
+  """
   checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(file_path, save_weights_only=save_weights_only, save_best_only=save_best_only, verbose=1)
   return checkpoint_callback
 

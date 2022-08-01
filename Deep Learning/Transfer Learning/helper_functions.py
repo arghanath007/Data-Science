@@ -298,7 +298,7 @@ def model_check_point_callback(file_path, save_weights_only, save_best_only, mon
     Returns:
         ModelCheckpoint callback.
   """
-  checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(file_path, save_weights_only=save_weights_only, save_best_only=save_best_only, verbose=1)
+  checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(file_path, save_weights_only=save_weights_only, save_best_only=save_best_only, verbose=1, monitor=monitor)
   return checkpoint_callback
 
 

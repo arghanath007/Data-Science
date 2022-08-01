@@ -247,6 +247,28 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 > **Fine-tuning transfer learning** is when you take the underlying patterns (also called weights) of a pretrained model and adjust (fine-tune) them to your own problem.
 
 
+## Transfer Learning Feature Extraction Steps:-
+
+1) import the libraries and an helper_function if needed
+2) Get the training and test datasets
+3) Create the train, test directories and split the train and test data.
+4) Create a *data augmentation* layer if needed.
+5) Create *Callbacks* if needed like ModelCheckpoint, TensorBoard etc.
+6) *ModelCheckpoint* callback is needed as it can be used to reset the model weights after it was fine-tuned.
+7) Create the model and compile and fit the model.
+8) Evaluate the model, save the accuracy value to a variable, plot so curves.
+
+
+## Transfer Learning Fine-tuning Steps:-
+
+1) Create a Feature *Extraction model* from the above steps.
+2) Unfreeze *n* numbers of layers from the model as needed. (n -> numbers of layers to be unfrozen)
+3) Recompile the model with a *10x* lower *learning_rate*.
+4) Fit the model for some epochs after the *initial epochs* in *feature_extraction* of the model
+5) Evaluate the model, save the accuracy value to a variable, plot so curves.
+
+
+
 
 
 

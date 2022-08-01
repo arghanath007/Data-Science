@@ -327,7 +327,7 @@ def create_data_augmented_layer_for_model(RandomFlip, RandomRotation, RandomZoom
   return data_augmentation_layer
 
 
-def create_feature_extraction_model(data_augmented_layer, model_checkpoint_callback,input_shape, base_model_name, include_top, class_count, train_data, test_data, epochs, tensorboard_callback):
+def create_feature_extraction_model(data_augmented_layer, model_checkpoint_callback,input_shape, base_model_name, include_top, class_count, train_data, test_data, epochs, tensorboard_dir_name, tensorboard_experiment_name):
   """
   This is a helper function to create a feature extraction model.
   Args:
@@ -357,6 +357,8 @@ def create_feature_extraction_model(data_augmented_layer, model_checkpoint_callb
   outputs= tf.keras.layers.Dense(class_count, activation="relu", name="output_layer")(x)
   model= tf.keras.Model(inputs, outputs)
   model.compile(optimizer=tf.keras.optimizers.Adam(), loss="categorical_crossentropy", metrics=["accuracy"])
+  
+  tensorboard_callback= create_tensorboard_callback(tensorboard_dir_name, tensorboard_experiment_name)
   
   history= model.fit(train_data, epochs=epochs, steps_per_epoch= len(train_data),validation_data=test_data, validation_steps=len(test_data) ,callbacks=[model_checkpoint_callback, tensorboard_callback])
   

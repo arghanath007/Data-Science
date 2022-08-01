@@ -287,13 +287,14 @@ def calculate_results(y_true, y_pred):
   return model_results
 
 
-def model_check_point_callback(file_path, save_weights_only, save_best_only):
+def model_check_point_callback(file_path, save_weights_only, save_best_only, monitor):
   """
     It is used to Create a ModelCheckpoint callback.
     Args:
         file_path: string, path to save the model file.
         save_weights_only: boolean, if True, then only the model's weights will be saved (model architecture will be saved in the same file).
         save_best_only: boolean, if True, the latest best model according to the quantity monitored will not be overwritten.
+        monitor: string, which metric to monitor like "accuracy", "val_accuracy", "loss", "val_loss".
     Returns:
         ModelCheckpoint callback.
   """

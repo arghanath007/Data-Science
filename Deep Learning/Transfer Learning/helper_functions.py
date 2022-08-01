@@ -320,7 +320,46 @@ def create_data_augmented_layer_for_model(RandomFlip, RandomRotation, RandomZoom
     tf.keras.layers.experimental.preprocessing.RandomRotation(RandomRotation),
     tf.keras.layers.experimental.preprocessing.RandomZoom(RandomZoom),
     tf.keras.layers.experimental.preprocessing.RandomHeight(RandomHeight),
-    tf.keras.layers.experimental.preprocessing.RandomWidth(RandomWidth)
+    tf.keras.layers.experimental.preprocessing.RandomWidth(RandomWidth),
+    # tf.keras.layers.experimental.preprocessing.Rescaling(1./255), For rescaling the image to 0-1, required for models like "Resnet50"
   ], name="data_augmentation_layer")
   
   return data_augmentation_layer
+
+
+def create_feature_extraction_model(data_augmented_layer, model_checkpoint_callback,input_shape, base_model_name, include_top, class_count, train_data, test_data, epochs, tensorboard_callback):
+  """
+  This is a helper function to create a feature extraction model.
+  Args:
+      data_augmented_layer: data augmentation layer name
+      model_checkpoint_callback: model checkpoint callback name
+      input_shape: tuple, shape of input data
+      base_model_name: string, name of base model
+      include_top: boolean, if True, includes top layers of model
+      class_count: int, number of classes in the model
+      train_data: tuple, training data
+      test_data: tuple, testing data
+      epochs: int, number of epochs to train the model
+      tensorboard_callback: tensorboard callback name]
+      
+  Returns:
+    The model and the history of the model respectively.
+  """
+  # Create a feature extraction model
+  
+  base_model= base_model_name(include_top=include_top)
+  base_model.trainable = False
+  
+  inputs= tf.keras.layers.Input(shape=input_shape,name="input_layer")
+  x= data_augmented_layer(inputs)
+  x= base_model(x, training=False)
+  x= tf.keras.layers.GlobalAveragePooling2D(name="global_average_pooling")(x)
+  outputs= tf.keras.layers.Dense(class_count, activation="relu", name="output_layer")(x)
+  model= tf.keras.Model(inputs, outputs)
+  model.compile(optimizer=tf.keras.optimizers.Adam(), loss="categorical_crossentropy", metrics=["accuracy"])
+  
+  history= model.fit(train_data, epochs=epochs, steps_per_epoch= len(train_data),validation_data=test_data, validation_steps=len(test_data) ,callbacks=[model_checkpoint_callback, tensorboard_callback])
+  
+  
+  return model, history
+  

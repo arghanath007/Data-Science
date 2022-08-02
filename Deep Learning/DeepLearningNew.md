@@ -289,7 +289,7 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 8. Transfer Learning with TensorFlow Part 3 Scaling Up
 
-> Video 2
+> Video 15
 
 
 

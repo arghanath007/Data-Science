@@ -268,6 +268,15 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 5) Evaluate the model, save the accuracy value to a variable, plot so curves.
 
 
+## Reduce Overfitting in Deep Learning:-
+
+1. Early Stopping
+2. Data Augmentation
+3. L1/L2 Regularization
+4. Dropout Layer
+5. Cross-Validation
+
+
 
 
 

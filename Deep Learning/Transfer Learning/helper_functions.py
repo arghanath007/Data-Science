@@ -294,7 +294,7 @@ def model_check_point_callback(file_path, save_weights_only, save_best_only, mon
         file_path: string, path to save the model file.
         save_weights_only: boolean, if True, then only the model's weights will be saved (model architecture will be saved in the same file).
         save_best_only: boolean, if True, the latest best model according to the quantity monitored will not be overwritten.
-        monitor: string, which metric to monitor like "accuracy", "val_accuracy", "loss", "val_loss".
+        monitor: string, which metric to monitor like "accuracy: val_accuracy", "loss: val_loss".
     Returns:
         ModelCheckpoint callback.
   """
@@ -325,6 +325,16 @@ def create_data_augmented_layer_for_model(RandomFlip, RandomRotation, RandomZoom
   ], name="data_augmentation_layer")
   
   return data_augmentation_layer
+
+def create_early_stopping_callback(monitor, patience):
+  """
+  This is a helper function to create an early stopping callback for a model.
+  Args:
+      monitor: string, which metric to monitor like "accuracy: val_accuracy", "loss: val_loss".
+      patience: int, number of epochs to wait before stopping the model.
+  """
+  early_stopping_callback = tf.keras.callbacks.EarlyStopping(monitor=monitor, patience=patience, verbose=1)
+  return early_stopping_callback
 
 
 def create_feature_extraction_model(data_augmented_layer, model_checkpoint_callback,input_shape, base_model_name, include_top, class_count, train_data, test_data, epochs, tensorboard_dir_name, tensorboard_experiment_name):

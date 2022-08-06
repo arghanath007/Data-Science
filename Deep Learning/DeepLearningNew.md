@@ -267,6 +267,8 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 4) Fit the model for some epochs after the *initial epochs* in *feature_extraction* of the model
 5) Evaluate the model, save the accuracy value to a variable, plot so curves.
 
+> Depending on the amount of data we have, if we have a small dataset, then we might unfreeze only one layer at a time and fine-tune it for some epochs. If we have a large dataset(like Food101), we might unfreeze more than one layer at a time(and get away with it) and fine-tune them for some epochs.
+
 
 ## Reduce Overfitting in Deep Learning:-
 
@@ -300,7 +302,7 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > 9. Milestone Project 1 Food Vision Big™
 
-> Video 2
+> Video 7
 
 
 

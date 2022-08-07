@@ -269,6 +269,13 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 > Depending on the amount of data we have, if we have a small dataset, then we might unfreeze only one layer at a time and fine-tune it for some epochs. If we have a large dataset(like Food101), we might unfreeze more than one layer at a time(and get away with it) and fine-tune them for some epochs.
 
+## Underfitting
+
+> In a nutshell, Underfitting refers to a model that can neither performs well on the training data nor generalize to new data. 
+
+## Overfitting
+
+> In a nutshell, Overfitting is a problem where the evaluation of machine learning algorithms on training data is different from unseen data.
 
 ## Reduce Overfitting in Deep Learning:-
 
@@ -278,6 +285,34 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 4. Dropout Layer
 5. Cross-Validation
 
+## Some Useful callbacks that are needed:-
+
+1. TensorBoard
+2. ModelCheckpoint
+3. Early Stopping
+
+## Some Useful evaluation metrics needed:-
+
+1. Accuracy
+2. Precision
+3. Recall
+4. F1-Score
+5. Confusion Matrix
+6. Loss Curves
+7. Classification Report
+8. Predicting on the test dataset images randomly
+9. Predicting on some random custom images related to the dataset the model was trained on.
+10. Finding the most wrong predictions 
+
+## Tensorflow Input pipeline docs:-
+
+**Link** -> https://www.tensorflow.org/guide/data_performance
+
+## Tensorflow Mixed Precision:-
+
+**Link** -> https://www.tensorflow.org/guide/mixed_precision
+
+> Computations are done in float16 for performance, but variables must be kept in float32 for numeric stability. You can directly query these properties of the policy.
 
 
 

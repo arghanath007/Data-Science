@@ -460,4 +460,17 @@ def create_feature_extraction_model(data_augmented_layer, model_checkpoint_callb
   
   return model, history
 
+def reduce_learning_rate_callback(monitor, factor, patience, minimum_lr):
+  """
+  This is a helper function to create a learning rate reducer callback for a model.
+  Args:
+      monitor: string, which metric to monitor like "accuracy: val_accuracy", "loss: val_loss".
+      factor: float, factor by which the learning rate will be reduced.
+      patience: int, number of epochs to wait before reducing the learning rate.
+      minimum_lr: float, minimum learning rate.
+  """
+  reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor=monitor,factor=factor, patience= patience, verbose=1, min_lr=minimum_lr)
+  
+  return reduce_lr
+
   

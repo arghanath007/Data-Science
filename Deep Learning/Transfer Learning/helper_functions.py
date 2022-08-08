@@ -1,7 +1,7 @@
 ## Some of the useful functions that are needed regularly.
 
 import tensorflow as tf
-import tertools
+import itertools
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import confusion_matrix

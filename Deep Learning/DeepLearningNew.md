@@ -284,6 +284,10 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 3. L1/L2 Regularization
 4. Dropout Layer
 5. Cross-Validation
+6. Reduce Complexity of the model or change the backbone(base_model) of the model.
+7. Normalize the images, between 0-1
+8. Learning Rate Scheduler(https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/LearningRateScheduler)
+9. Learning rate decay
 
 ## Some Useful callbacks that are needed:-
 

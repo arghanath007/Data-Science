@@ -286,14 +286,18 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 5. Cross-Validation
 6. Reduce Complexity of the model or change the backbone(base_model) of the model.
 7. Normalize the images, between 0-1
-8. Learning Rate Scheduler(https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/LearningRateScheduler)
-9. Learning rate decay
+8. As we already have *Reduce Learning Rate Callback* and *Learning Rate Scheduler Callback*, we can use if needed the below two callbacks i.e the *Learning Rate Scheduler* and  *Learning rate decay*
+
+> **Learning Rate Scheduler** -> (https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/LearningRateScheduler)
+> **Learning rate decay** -> (https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay)
 
 ## Some Useful callbacks that are needed:-
 
 1. TensorBoard
 2. ModelCheckpoint
 3. Early Stopping
+4. Reduce Learning Rate Callback
+5. Learning Rate Scheduler Callback(If needed)
 
 ## Some Useful evaluation metrics needed:-
 

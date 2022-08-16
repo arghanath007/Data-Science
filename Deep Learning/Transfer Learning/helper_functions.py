@@ -473,4 +473,22 @@ def reduce_learning_rate_callback(monitor, factor, patience, minimum_lr):
   
   return reduce_lr
 
+
+def preprocess_image(image, label, img_shape=224, scaling=False):
+  """
+    Converts any image datatype to 'float32', and reshapes the images to [img_shape, img_shape, color_channels]
+    Args:
+      image: The image to the preprocessed
+      label: string, The label of the image
+      img_shape: int, Default is '224'. The shape to which the image is preprocessed into.
+      scaling: boolean, Default is 'False'. If True, the image is rescaled/normalized between 0-1.
+    Returns:
+      (newImage, label) respectively as a tuple.
+  """
+  image= tf.image.resize(image, [img_shape, img_shape]) # Resizing the image into a same size.
+  if scaling:
+    image= image/255. # Scaling/Normalizing values of the image. EfficientNetBx models have build-in rescaling layers
+  newdtypeImage= tf.cast(image, tf.float32) # Changing the dtype of the image into float32
+  return newdtypeImage, label
+
   

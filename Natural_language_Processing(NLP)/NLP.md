@@ -1,5 +1,8 @@
 **LINK** -> https://www.youtube.com/watch?v=R-AG4-qZs1A&list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&index=1
 
+**NLP** -> Natural Language Processing
+**NLU** -> Natural Language Understanding
+
 >Traditionally, Computers were designed to work on numbers and they were pretty good at tasks that were related to numbers.
     Using NLP, we can have the computer assist us in language related tasks.
 

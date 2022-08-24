@@ -110,6 +110,9 @@ Need to learn -> **Cosine similarity.**
 
 
 
+## To-do
+
+> Upload the Ensemble Model CSV file to Kaggle Competition.(Done)
 
 
 **Currently watching - Part 12**

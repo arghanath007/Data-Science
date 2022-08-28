@@ -312,6 +312,13 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 9. Predicting on some random custom images related to the dataset the model was trained on.
 10. Finding the most wrong predictions 
 
+## L1 and L2 Regularization
+
+* https://neptune.ai/blog/fighting-overfitting-with-l1-or-l2-regularization
+
+* https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning
+
+
 ## Tensorflow Input pipeline docs:-
 
 **Link** -> https://www.tensorflow.org/guide/data_performance

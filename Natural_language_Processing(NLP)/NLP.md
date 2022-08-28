@@ -114,6 +114,8 @@ Need to learn -> **Cosine similarity.**
 
 > Upload the Ensemble Model CSV file to Kaggle Competition.(Done)
 
+> NLP SkimLit Exercise
+
 
 **Currently watching - Part 12**
 

@@ -491,4 +491,23 @@ def preprocess_image(image, label, img_shape=224, scaling=False):
   newdtypeImage= tf.cast(image, tf.float32) # Changing the dtype of the image into float32
   return newdtypeImage, label
 
+
+# Function to read the lines of a document
+def get_lines(filename):
+  """
+  Reads filename (a text file) and returns the lines of text as a list.
+  
+  Args:
+      filename: a string containing the target filepath to read.
+  
+  Returns:
+      A list of strings with one string per line from the target filename.
+      For example:
+      ["this is the first line of filename",
+       "this is the second line of filename",
+       "..."]
+  """
+  with open(filename, "r") as f:
+    return f.readlines()
+
   

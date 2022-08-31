@@ -468,6 +468,9 @@ def reduce_learning_rate_callback(monitor, factor, patience, minimum_lr):
       factor: float, factor by which the learning rate will be reduced.
       patience: int, number of epochs to wait before reducing the learning rate.
       minimum_lr: float, minimum learning rate.
+      
+  Example: 
+      learning_rate_reduce_callback= reduce_learning_rate_callback(monitor="val_loss", factor=0.2, patience=2, minimum_lr=1e-7)
   """
   reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor=monitor,factor=factor, patience= patience, verbose=1, min_lr=minimum_lr)
   
@@ -560,5 +563,14 @@ def preprocess_text_with_line_numbers(filename):
       abstract_lines += line
   
   return abstract_samples
+
+
+def split_sentences(text):
+  """
+    Function to split text/sentences into characters
+
+  """
+
+  return " ".join(list(text))
 
   

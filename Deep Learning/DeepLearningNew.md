@@ -314,9 +314,11 @@ The beauty of CNN is that, it will automatically detect the filters(Eye,Nose,ear
 
 ## L1 and L2 Regularization
 
-* https://neptune.ai/blog/fighting-overfitting-with-l1-or-l2-regularization
+* https://neptune.ai/blog/fighting-overfitting-with-l1-or-l2-regularization(Explained well)
 
-* https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning
+* https://www.analyticssteps.com/blogs/l2-and-l1-regularization-machine-learning(Examples)
+
+* https://www.tensorflow.org/api_docs/python/tf/keras/regularizers/Regularizer(Docs)
 
 
 ## Tensorflow Input pipeline docs:-

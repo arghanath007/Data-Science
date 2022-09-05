@@ -573,4 +573,31 @@ def split_sentences(text):
 
   return " ".join(list(text))
 
+
+
+# Create a function to plot time series data
+def plot_time_series(timesteps, values, ylabel,format='.', start=0, end=None, label=None):
+  """
+  Description:
+  ----------
+  Plots a timesteps (a series of points in time) against values (a series of values across timesteps).
+  
+  Parameters
+  ---------
+  timesteps : array of timesteps
+  values : array of values across time
+  format : style of plot, default "."
+  start : where to start the plot (setting a value will index from start of timesteps & values)
+  end : where to end the plot (setting a value will index from end of timesteps & values)
+  label : label to show on plot of values
+  ylabel: The ylabel of the plot, string type.
+  """
+  # Plot the series
+  plt.plot(timesteps[start:end], values[start:end], format, label=label)
+  plt.xlabel("Time")
+  plt.ylabel(ylabel)
+  if label:
+    plt.legend(fontsize=14) # make label bigger
+  plt.grid(True)
+
   

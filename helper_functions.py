@@ -599,5 +599,102 @@ def plot_time_series(timesteps, values, ylabel,format='.', start=0, end=None, la
   if label:
     plt.legend(fontsize=14) # make label bigger
   plt.grid(True)
+  
+  
+# MASE implemented courtesy of sktime - https://github.com/alan-turing-institute/sktime/blob/ee7a06843a44f4aaec7582d847e36073a9ab0566/sktime/performance_metrics/forecasting/_functions.py#L16
+def mean_absolute_scaled_error(y_true, y_pred):
+  """
+  Description:
+    Implement MASE (assuming no seasonality of data).
+  """
+  mae = tf.reduce_mean(tf.abs(y_true - y_pred))
 
+  # Find MAE of naive forecast (no seasonality)
+  mae_naive_no_season = tf.reduce_mean(tf.abs(y_true[1:] - y_true[:-1])) # our seasonality is 1 day (hence the shifting of 1 day)
+
+  return mae / mae_naive_no_season
+
+
+
+# Evaluation function for Time Series Forecasting problems.
+def evaluate_preds(y_true, y_pred):
+  # Make sure float32 (for metric calculations)
+  # y_true = tf.cast(y_true, dtype=tf.float32)
+  # y_pred = tf.cast(y_pred, dtype=tf.float32)
+
+  # Calculate various metrics
+  mae = tf.keras.metrics.mean_absolute_error(y_true, y_pred)
+  mse = tf.keras.metrics.mean_squared_error(y_true, y_pred)
+  rmse = tf.sqrt(mse)
+  mape = tf.keras.metrics.mean_absolute_percentage_error(y_true, y_pred)
+  mase = mean_absolute_scaled_error(y_true, y_pred)
+
+  # Account for different sized metrics (for longer horizons, reduce to single number)
+  if mae.ndim > 0: # if mae isn't already a scalar, reduce it to one by aggregating tensors to mean
+    mae = tf.reduce_mean(mae)
+    mse = tf.reduce_mean(mse)
+    rmse = tf.reduce_mean(rmse)
+    mape = tf.reduce_mean(mape)
+    mase = tf.reduce_mean(mase)
+
+  return {"mae": mae.numpy(),
+          "mse": mse.numpy(),
+          "rmse": rmse.numpy(),
+          "mape": mape.numpy(),
+          "mase": mase.numpy()}
+
+
+
+WINDOWS_SIZE=30
+HORIZON=1
+
+def get_labelled_windows(x, horizon=HORIZON):
+  """
+    Description:
+      Creates labels for windowed dataset.
+      E.g, 
+        if horizon=1
+        Input: [0,1,2,3,4,5,6,7] -> Output: ([0,1,2,3,4,5,6], [7])
+  """
+
+  return x[:, :-horizon], x[:, -horizon:]
+
+
+# Function to make train_test splits for time-series problems
+
+def make_train_test_split(windows, labels, test_split=0.2):
+  """
+    Description: 
+      Splits matching pairs of windows and labels into train and test split.
+
+    Parameters: 
+      windows -> The dataset(X)
+      labels -> The labels of the dataset(y)
+      test_split -> The ratio in which the dataset is to be split. Default is "0.2"
+  """
+
+  split_size= int((1- test_split) * len(windows))
+  train_windows= windows[:split_size]
+  train_labels= labels[:split_size]
+
+  test_windows= windows[split_size:]
+  test_labels= labels[split_size:]
+
+  return train_windows, test_windows, train_labels, test_labels
+
+# Function to make predictions of a trained model
+
+def make_preds(model, input_data):
+  """
+  Description:
+    Uses model to make predictions on input_data.
+
+  Parameters:
+    model: trained model 
+    input_data: windowed input data (same kind of data model was trained on)
+
+  Returns model predictions on input_data.
+  """
+  forecast = model.predict(input_data)
+  return tf.cast(tf.squeeze(forecast), dtype="float64") # return 1D array of predictions
   

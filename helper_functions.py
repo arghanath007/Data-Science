@@ -696,5 +696,28 @@ def make_preds(model, input_data):
   Returns model predictions on input_data.
   """
   forecast = model.predict(input_data)
-  return tf.cast(tf.squeeze(forecast), dtype="float64") # return 1D array of predictions
+  return tf.cast(tf.squeeze(forecast), dtype="float32") # return 1D array of 
+
+
+def make_windows(x, window_size=WINDOWS_SIZE, horizon= HORIZON):
+  """
+    Description:
+      Turns a 1D array(Univariate) into a 2D array of sequential labelled windows of "window_size" with "horizon_size" labels. 
+
+    Returns:
+      It returns a tuple (windows, labels).
+  """
+
+  # 1 Creates a window step of specific window size
+  window_step= np.expand_dims(np.arange(window_size + horizon), axis=0)
+
+  # 2 Uses NumPy indexing to create a 2D of multiple window steps
+  window_indexes= window_step + np.expand_dims(np.arange(len(x) - (window_size + horizon-1)), axis=0).T # create 2D array of windows of size window_size
+
+  # 3 Uses the 2D array of multuple window steps to index on a target series
+  windowed_array= x[window_indexes]
+
+  # 4 Uses the get_labelled_windows() function we created above to turn the window steps into windows with a specified horizon
+  windows, labels= get_labelled_windows(windowed_array, horizon=horizon)
+  return windows, labels
   

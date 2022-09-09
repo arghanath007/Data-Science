@@ -696,8 +696,8 @@ def make_preds(model, input_data):
   Returns model predictions on input_data.
   """
   forecast = model.predict(input_data)
-  cast= tf.cast(forecast, dtype=tf.float32)
-  return tf.squeeze(cast) # return 1D array of 
+  # cast= tf.cast(forecast, dtype=tf.float32)
+  return tf.squeeze(forecast) # return 1D array of 
 
 
 def make_windows(x, window_size=WINDOWS_SIZE, horizon= HORIZON):

@@ -411,14 +411,15 @@ def create_data_augmented_layer_for_model(RandomFlip, RandomRotation, RandomZoom
   
   return data_augmentation_layer
 
-def create_early_stopping_callback(monitor, patience):
+def create_early_stopping_callback(monitor, patience, restore_best_weight):
   """
   This is a helper function to create an early stopping callback for a model.
   Args:
       monitor: string, which metric to monitor like "accuracy: val_accuracy", "loss: val_loss".
       patience: int, number of epochs to wait before stopping the model.
+      restore_best_weight: boolean, if True, the model's weights from the epoch with the best value of the monitored quantity will be loaded into the model.
   """
-  early_stopping_callback = tf.keras.callbacks.EarlyStopping(monitor=monitor, patience=patience, verbose=1)
+  early_stopping_callback = tf.keras.callbacks.EarlyStopping(monitor=monitor, patience=patience, verbose=1, restore_best_weight=restore_best_weight)
   return early_stopping_callback
 
 
@@ -460,7 +461,7 @@ def create_feature_extraction_model(data_augmented_layer, model_checkpoint_callb
   
   return model, history
 
-def reduce_learning_rate_callback(monitor, factor, patience, minimum_lr):
+def reduce_learning_rate_callback(monitor, patience, minimum_lr=0, factor=0.1):
   """
   This is a helper function to create a learning rate reducer callback for a model.
   Args:
@@ -619,8 +620,8 @@ def mean_absolute_scaled_error(y_true, y_pred):
 # Evaluation function for Time Series Forecasting problems.
 def evaluate_preds(y_true, y_pred):
   # Make sure float32 (for metric calculations)
-  # y_true = tf.cast(y_true, dtype=tf.float32)
-  # y_pred = tf.cast(y_pred, dtype=tf.float32)
+  y_true = tf.cast(y_true, dtype=tf.float32)
+  y_pred = tf.cast(y_pred, dtype=tf.float32)
 
   # Calculate various metrics
   mae = tf.keras.metrics.mean_absolute_error(y_true, y_pred)

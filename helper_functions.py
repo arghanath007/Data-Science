@@ -411,7 +411,7 @@ def create_data_augmented_layer_for_model(RandomFlip, RandomRotation, RandomZoom
   
   return data_augmentation_layer
 
-def create_early_stopping_callback(monitor, patience, restore_best_weight):
+def create_early_stopping_callback(monitor, patience, restore_best_weight=True):
   """
   This is a helper function to create an early stopping callback for a model.
   Args:
@@ -419,7 +419,7 @@ def create_early_stopping_callback(monitor, patience, restore_best_weight):
       patience: int, number of epochs to wait before stopping the model.
       restore_best_weight: boolean, if True, the model's weights from the epoch with the best value of the monitored quantity will be loaded into the model.
   """
-  early_stopping_callback = tf.keras.callbacks.EarlyStopping(monitor=monitor, patience=patience, verbose=1, restore_best_weight=restore_best_weight)
+  early_stopping_callback = tf.keras.callbacks.EarlyStopping(monitor=monitor, patience=patience, verbose=1, restore_best_weights=restore_best_weight)
   return early_stopping_callback
 
 

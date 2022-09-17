@@ -672,6 +672,10 @@ def make_train_test_split(windows, labels, test_split=0.2):
       windows -> The dataset(X)
       labels -> The labels of the dataset(y)
       test_split -> The ratio in which the dataset is to be split. Default is "0.2"
+      
+    Return Format:
+      Tuple of (train_windows, test_windows), (train_labels, test_labels)
+      Tuple of (X_train, X_test), (y_train, y_test)
   """
 
   split_size= int((1- test_split) * len(windows))

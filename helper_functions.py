@@ -371,8 +371,8 @@ def calculate_results(y_true, y_pred):
                   "f1": model_f1}
   return model_results
 
-
-def model_check_point_callback(file_path, save_weights_only, save_best_only, monitor):
+import os
+def model_check_point_callback(model_name, save_path, save_weights_only, save_best_only, monitor):
   """
     It is used to Create a ModelCheckpoint callback.
     Args:
@@ -383,6 +383,7 @@ def model_check_point_callback(file_path, save_weights_only, save_best_only, mon
     Returns:
         ModelCheckpoint callback.
   """
+  file_path= os.path.join(save_path, model_name)
   checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(file_path, save_weights_only=save_weights_only, save_best_only=save_best_only, verbose=1, monitor=monitor)
   return checkpoint_callback
 
@@ -674,8 +675,8 @@ def make_train_test_split(windows, labels, test_split=0.2):
       test_split -> The ratio in which the dataset is to be split. Default is "0.2"
       
     Return Format:
-      Tuple of (train_windows, test_windows), (train_labels, test_labels)
-      Tuple of (X_train, X_test), (y_train, y_test)
+      Example -> train_windows, test_windows, train_labels, test_labels
+      General -> X_train, X_test, y_train, y_test
   """
 
   split_size= int((1- test_split) * len(windows))
@@ -726,4 +727,55 @@ def make_windows(x, window_size=WINDOWS_SIZE, horizon= HORIZON):
   # 4 Uses the get_labelled_windows() function we created above to turn the window steps into windows with a specified horizon
   windows, labels= get_labelled_windows(windowed_array, horizon=horizon)
   return windows, labels
+
+
+def create_optimized_datasets(X_train, X_test, y_train, y_test, batch_size=1024):
+  """
+    Description:
+      Function for Optimizing the datasets for improved and better performance. Model trains faster as well.
+    Parameters: 
+      X_train, X_test, y_train, y_test -> The datasets which need to be optimized.
+    Return: 
+      train_dataset, test_dataset
+  """
+  X_train= tf.data.Dataset.from_tensor_slices(X_train)
+  y_train= tf.data.Dataset.from_tensor_slices(y_train)
+
+  X_test= tf.data.Dataset.from_tensor_slices(X_test)
+  y_test= tf.data.Dataset.from_tensor_slices(y_test)
+
+  train_dataset= tf.data.Dataset.zip((X_train, y_train))
+  test_dataset= tf.data.Dataset.zip((X_test, y_test))
+
+  BATCH_SIZE= batch_size
+
+  train_dataset= train_dataset.batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+  test_dataset= test_dataset.batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+
+  return train_dataset, test_dataset
+
+
+
+def create_conv1d_models(window_size, horizon):
+  """
+    Description:  
+      A function to create multiple CONV1D models with varying window_sizes and horizon to experiment and see which sizes work better or have better predictions
+
+    Parameters:
+      window_size= The window size we want to set for that particular model. It the no. of previous values the model will see to makes it prediction. Example: '7' means the model can look at the past '7' values and make a prediction by looking at them. 
+      horizon= The horizon we want to set for that particular model. It is the no. for which the model will make predictions into the future. Example: '1' means the model can make a prediction '1' value into the future.
+      model_count= The count of models we want.
+    Returns:
+     It return the model, we have to still fit the model on the dataset.
+  """
+  inputs= layers.Input(shape=(window_size, ), dtype="float32", name=f"model_inputs")
+  expand_dims_layer= layers.Lambda(lambda x: tf.expand_dims(x, axis=1))(inputs)
+  x= layers.Conv1D(filters= 128, kernel_size= window_size, padding="causal", activation="relu")(expand_dims_layer)
+  x= layers.MaxPool1D(5, padding="same")(x)
+  x= layers.Conv1D(filters= 128, kernel_size= window_size, padding="causal", activation="relu")(x)
+  x= layers.MaxPool1D(5, padding="same")(x)
+  outputs= layers.Dense(horizon, activation="linear", name=f"output_layer")(x)
+
+  model= tf.keras.Model(inputs, outputs, name="model_conv1d")
+  return model
   

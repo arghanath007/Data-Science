@@ -376,7 +376,7 @@ def model_check_point_callback(model_name, save_path, save_weights_only, save_be
   """
     It is used to Create a ModelCheckpoint callback.
     Args:
-        file_path: string, path to save the model file.
+        model_name, save_path: string, file_path to save the model file.
         save_weights_only: boolean, if True, then only the model's weights will be saved (model architecture will be saved in the same file).
         save_best_only: boolean, if True, the latest best model according to the quantity monitored will not be overwritten.
         monitor: string, which metric to monitor like "accuracy: val_accuracy", "loss: val_loss".

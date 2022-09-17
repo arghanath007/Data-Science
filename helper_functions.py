@@ -697,7 +697,7 @@ def make_preds(model, input_data):
 
   Parameters:
     model: trained model 
-    input_data: windowed input data (same kind of data model was trained on)
+    input_data: windowed input data, which is not seen by the model during model training (same kind of data model was trained on in terms of shape), X_test in general.
 
   Returns model predictions on input_data.
   """

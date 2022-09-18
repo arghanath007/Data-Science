@@ -755,6 +755,7 @@ def create_optimized_datasets(X_train, X_test, y_train, y_test, batch_size=1024)
   return train_dataset, test_dataset
 
 
+from tensorflow.keras import layers
 
 def create_conv1d_models(window_size, horizon):
   """
@@ -779,3 +780,57 @@ def create_conv1d_models(window_size, horizon):
   model= tf.keras.Model(inputs, outputs, name="model_conv1d")
   return model
   
+
+def create_full_optimized_dataset(X, y):
+  """
+    Description: 
+      Function to create optimized full dataset, no test/validation dataset present here. Only training dataset.
+
+    Parameters:
+      X: The independent variable dataset(Window)
+      y: The dependent variable dataset(Label)
+  """
+
+  features_dataset_all= tf.data.Dataset.from_tensor_slices(X)
+  labels_dataset_all= tf.data.Dataset.from_tensor_slices(y)
+
+  dataset_all= tf.data.Dataset.zip((features_dataset_all, labels_dataset_all))
+
+  BATCH_SIZE=1024
+
+  dataset= dataset_all.batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+
+  return dataset
+
+
+def create_model(dataset, window_size, horizon):
+  """
+    Description:
+      Function just to create a model, compile and train the model.
+    Parameters:
+      window_size: The window_size we want for the model. Eg: 7,14,21
+      horizon: The horizon the model predicts on. Eg: 1, 7
+      dataset: The dataset we want to train the model on.Eg: Prices of bitcoin.
+    Returns:
+      The model, the summary and the history of the model.
+      Output -> Summary, Model, history
+  """
+  early_stopping_callback= create_early_stopping_callback(monitor='loss', patience=50, restore_best_weight="True")
+  learning_rate_callback= reduce_learning_rate_callback(monitor="loss", factor=0.1, patience=50, minimum_lr=0)
+
+  inputs= layers.Input(shape=(window_size, ), name="model_inputs")
+  x=layers.Dense(256, activation="relu")(inputs)
+  x=layers.Dense(256, activation="relu")(x)
+  x=layers.Dense(128, activation="relu")(x)
+  x=layers.Dense(128, activation="relu")(x)
+  outputs= layers.Dense(horizon, activation="linear")(x)
+  model= tf.keras.Model(inputs, outputs, name="model")
+  summary= model.summary()
+  model.compile(loss="mae", optimizer=tf.keras.optimizers.Adam(), metrics=['mae', 'mse'])
+
+  full_windows, full_labels= make_windows(dataset, window_size, horizon)
+  dataset= create_full_optimized_dataset(full_windows, full_labels)
+
+  history= model.fit(dataset, epochs=200, callbacks=[early_stopping_callback, learning_rate_callback])
+
+  return summary, model, history

@@ -1,4 +1,22 @@
 {
-  "cSpell.words": ["keras", "pdpbox", "preds", "pyplot"],
+  "cSpell.words": [
+    "Alexa",
+    "Convolutional",
+    "crossentropy",
+    "DSLR",
+    "Fasttext",
+    "keras",
+    "leaderboard",
+    "Lemmatization",
+    "NLTK",
+    "Overfitting",
+    "pdpbox",
+    "preds",
+    "Pretrained",
+    "pyplot",
+    "Spacy",
+    "TFIDF",
+    "Underfitting"
+  ],
   "jupyter.jupyterServerType": "local"
 }

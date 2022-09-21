@@ -87,3 +87,5 @@ Tomato_Disease_Classification/Dataset_tomato-20220303T063353Z-001.zip
 Python/dictionary.py
 Python/lists.py
 Python/set.py
+Time Series/.~lock.BTC-USD.csv#
+.gitignore

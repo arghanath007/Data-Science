@@ -1,5 +1,8 @@
-# Requirements (Data Analyst)
+# Data Analytics
 
+> It is the process of getting insights from the data.
+
+# Requirements (Data Analyst)
 > Link -> https://www.youtube.com/watch?v=x6tnVOn4st4
 
 1) Excel Knowledge
@@ -67,6 +70,6 @@
 
 
 
-* Video Link to Continue -> https://www.youtube.com/watch?v=68m2UCtedj0&list=PLeo1K3hjS3uva8pk1FI3iK9kCOKQdz1I9&index=9
+* Video Link to Continue -> https://www.youtube.com/watch?v=pqSoCa2NGj4&list=PLeo1K3hjS3utcb9nKtanhcn8jd2E0Hp9b&index=16
 
 

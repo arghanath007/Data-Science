@@ -51,14 +51,15 @@
 
 1) Get the Data either from excel, database or from something else.
 2) Import the data into Power BI.
-3) Analyze the data, check if the data has some problems, missing values, outliers, garbage values, etc.
-4) Data Modelling -> *Star Schema*
-5) Transforming the data(ETL) i.e cleaning the data(removing unnecessary values). Search **Transform Data** in Power BI.
-6) Data Pipeline.
-7) Close and Apply, to apply all the transformation changes to the data.
-8) Building the dashboard
-9) Publish the dashboard to the web for others to see on the team or managers need to see it. Need a business email id to publish the dashboard.
-10) 
+3) Create a Mock Report, discussing all the things that are needed for the report, make a rough sketch of it before trying to build the report.
+4) Analyze the data, check if the data has some problems, missing values, outliers, garbage values, etc.
+5) Data Modelling -> *Star Schema*
+6) Transforming the data(ETL) i.e cleaning the data(removing unnecessary values). Search **Transform Data** in Power BI.
+7) Data Pipeline.
+8) Close and Apply, to apply all the transformation changes to the data.
+9) Building the dashboard
+10) Publish the dashboard to the web for others to see on the team or managers need to see it. Need a business email id to publish the dashboard.
+11) Publish the dashboard to be viewed on mobile as well.
 
 
 > To view the report via web, phone or from another computer, we need to publish the report. Search **Publish** in Power BI. We would need a **Business Email** for that.
@@ -70,6 +71,6 @@
 
 
 
-* Video Link to Continue -> https://www.youtube.com/watch?v=pqSoCa2NGj4&list=PLeo1K3hjS3utcb9nKtanhcn8jd2E0Hp9b&index=16
+* Video Link to Continue -> https://www.youtube.com/watch?v=pqSoCa2NGj4&list=PLeo1K3hjS3utcb9nKtanhcn8jd2E0Hp9b&index=20
 
 

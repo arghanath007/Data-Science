@@ -1,15 +1,26 @@
-# Data Analytics
+# Data Analyst
 
-> It is the process of getting insights from the data.
+> Someone who collects, transforms and organizes data in order to help make informed decisions.
+
+# Data Analysis
+
+> It is the process of getting insights from the data. 
+
+> The Collection, transformation, and organization of data in order to draw conclusions, make predictions and drive informed decision making.
 
 # Requirements (Data Analyst)
 > Link -> https://www.youtube.com/watch?v=x6tnVOn4st4
 
-1) Excel Knowledge
-2) SQL Knowledge
+1) Excel Knowledge 
+* Link - https://excel-practice-online.com/
+* Excel -> https://www.youtube.com/watch?v=Vl0H-qTclOg
+
+2) SQL Knowledge (leetcode, stratascratch, datalemur, )
 3) Coding language (Python, R, etc.)
+* Python -> https://www.learnpython.org/
 4) Statistics
 5) Visualization (Tableau, Power BI, etc.)
+* Power Bi -> https://www.datacamp.com/courses/introduction-to-power-bi
 7) Story Telling, means telling an appealing story via the insights you have from the data.
 
 
@@ -70,7 +81,18 @@
 > Link -> https://github.com/codebasics/py/blob/master/TechTopics/ResumeDataAnalyst/Resume_data_analyst_utsav_mehta.pdf
 
 
+### Courses for Data Analyst
 
-* Video Link to Continue -> https://www.youtube.com/watch?v=pqSoCa2NGj4&list=PLeo1K3hjS3utcb9nKtanhcn8jd2E0Hp9b&index=20
+* Link -> https://www.youtube.com/watch?v=aqRxZSrJLEc
+
+> They are on coursera, I have to give financial Aid before I can enroll in the courses. While doing one, apply for the next one. Links for all of them are in the description of the video.
+
+1) Google Data Analytics Professional Certificate -> https://www.coursera.org/professional-certificates/google-data-analytics?irclickid=SoAVYrz8CxyNRHk1dW2Z9XGaUkDTukwENSKMUs0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=2946137&utm_content=b2c
+
+    1.Foundations: Data, Data, Everywhere -> Date: **Oct 12, 2022**
+
+
+
+* Video Link to Continue -> https://www.youtube.com/watch?v=27dxBp0EgCc
 
 

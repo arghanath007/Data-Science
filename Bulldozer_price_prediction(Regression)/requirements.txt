@@ -9,7 +9,7 @@ fonttools==4.28.5
 ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1641325327884/work/dist/ipykernel-6.6.1-py3-none-any.whl
 ipython @ file:///home/conda/feedstock_root/build_artifacts/ipython_1641404644249/work
 jedi @ file:///home/conda/feedstock_root/build_artifacts/jedi_1637175084646/work
-joblib==1.1.0
+joblib==1.2.0
 jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1637611911738/work
 jupyter-core @ file:///home/conda/feedstock_root/build_artifacts/jupyter_core_1636814262349/work
 kiwisolver==1.3.2

@@ -37,6 +37,8 @@
 
 > Link -> https://www.sqlbi.com/p/introducing-dax-video-course/
 
+> Dax examples -> https://www.youtube.com/watch?v=QJw4HkagVWchttps://www.youtube.com/watch?v=QJw4HkagVWc
+
 ## Data Modelling for Power BI
 
 > Link -> https://www.sqlbi.com/p/introduction-to-data-modeling-for-power-bi-video-course/
@@ -71,6 +73,17 @@
 9) Building the dashboard
 10) Publish the dashboard to the web for others to see on the team or managers need to see it. Need a business email id to publish the dashboard.
 11) Publish the dashboard to be viewed on mobile as well.
+
+
+
+## Building a Report/Dashboard in PowerBi
+
+1) Import the data into Power BI.
+2) Analyze the data, check if the data has some problems, missing values, outliers, garbage values, etc.
+3) Clean the data, remove unnecessary values by **transforming the data**.
+4) Check the modelling of the data, if it is in a star schema or not. Make necessary links between the tables.
+5) Build a mock report, discuss with the team what all things are needed in the report. Make a rough sketch of it before trying to build the report.
+6) Build the report, add visuals, slicers, filters, etc.
 
 
 > To view the report via web, phone or from another computer, we need to publish the report. Search **Publish** in Power BI. We would need a **Business Email** for that.

@@ -2,11 +2,23 @@
 
 > Someone who collects, transforms and organizes data in order to help make informed decisions.
 
+> Data Analyst answers to existing questions by creating insights from data sources.
+
+# Data Science
+
+> Creating new ways of modelling and understanding the unknown by using raw data.
+
+> Data Scientists create new questions using data.
+
 # Data Analysis
 
-> It is the process of getting insights from the data. 
+> It is the process of getting insights from the data. It is the process of analyzing the data.
 
 > The Collection, transformation, and organization of data in order to draw conclusions, make predictions and drive informed decision making.
+
+# Data Analytics
+
+> The science of data.
 
 # Requirements (Data Analyst)
 > Link -> https://www.youtube.com/watch?v=x6tnVOn4st4
@@ -31,6 +43,27 @@
 3) Deep Learning
 4) Predictive Analysis
 5) Strong programming skills.
+
+## Data Analysis life cycle:
+
+1)Ask
+2)Prepare
+3)Process
+4)Analyze
+5)Share
+6)Act
+
+## Life Cycle of Data:
+
+1)Plan: Decide what kind of data is needed, how it will be managed, and who will be responsible for it.
+
+2)Capture: Collect or bring in data from a variety of different sources.
+3)Manage: Care for and maintain the data. This includes determining how and where it is stored and the tools used to do so.
+
+4)Analyze: Use the data to solve problems, make decisions, and support business goals.
+
+5)Archive: Keep relevant data stored for long-term and future reference.
+6)Destroy: Remove data from storage and delete any shared copies of the data.
 
 
 ## DAX, syntax for Power BI

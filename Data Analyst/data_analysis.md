@@ -135,7 +135,9 @@
 
 1) Google Data Analytics Professional Certificate -> https://www.coursera.org/professional-certificates/google-data-analytics?irclickid=SoAVYrz8CxyNRHk1dW2Z9XGaUkDTukwENSKMUs0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=2946137&utm_content=b2c
 
-    1.Foundations: Data, Data, Everywhere -> Date: **Oct 12, 2022**
+    1. Foundations: Data, Data, Everywhere -> Completed on **6th of Oct 2022**
+    2. Ask Questions to Make Data-Driven Decisions -> Start from **12th of Oct 2022**
+        * Link -> https://www.coursera.org/learn/ask-questions-make-decisions
 
 
 

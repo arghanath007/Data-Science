@@ -4,4 +4,4 @@
 
 ## Cheat Sheet
 
-* Link -> https://www.rstudio.com/resources/cheatsheets/
+* Link -> <https://www.rstudio.com/resources/cheatsheets/>

@@ -1,17 +1,16 @@
 # Data Analyst
 
-> Someone who collects, transforms and organizes data in order to help make informed decisions. Data Analyst answers to existing questions by creating insights from data sources.
+> Someone who collects, transforms and organizes data in order to help make informed decisions.
+>Data Analyst answers to existing questions by creating insights from data sources.
 
 ## Data Science
 
 > Creating new ways of modelling and understanding the unknown by using raw data.
-
 > Data Scientists create new questions using data.
 
 ## Data Analysis
 
 > It is the process of getting insights from the data. It is the process of analyzing the data.
-
 > The Collection, transformation, and organization of data in order to draw conclusions, make predictions and drive informed decision making.
 
 ## Data Analytics

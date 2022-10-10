@@ -11,6 +11,14 @@
 
 3. Link(HR Analytics) -> <https://www.youtube.com/playlist?list=PLeo1K3hjS3uuVQccZa7yFwK3ltoGQOWbM>
 
+### Codebasics Resume Challenges
+
+* Link -> <https://codebasics.io/event/codebasics-resume-project-challenge>
+
+1. Link(Hospitality to Revenue Team) Challenge *1* ->  **Completed**
+
+2. Link(Supply Chain issue in FMCG Domain) Challenge *2* -> **Working on it**
+
 > Required Power BI Desktop but it is only available for Windows.
 
 ## 3 ML projects for Data Scientist

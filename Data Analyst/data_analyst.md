@@ -3,6 +3,17 @@
 > Someone who collects, transforms and organizes data in order to help make informed decisions.
 >Data Analyst answers to existing questions by creating insights from data sources.
 
+## Important Points to Remember as a Data Analyst
+
+1. Group up the measures in a separate table.
+2. Understanding the **Calculate** function in DAX is very important.
+3. We can also create additional columns in the data using DAX.
+4. Keep the most important insights at the **top left corner** of the report as most of the people read from left to right. Do the opposite if you are in a country where people read from right to left.
+5. A good insights report should enable the people(Stakeholders, Co-founder, CEO, HR, etc.) to ask more why's on the Top KPIs.
+6. Copy and paste the visuals and alter them to boost the productivity.
+
+* **MVP** -> Minimum Viable Product
+
 ## Data Science
 
 > Creating new ways of modelling and understanding the unknown by using raw data.
@@ -116,6 +127,7 @@
 6) Build the report, add visuals, slicers, filters, etc.
 
 > To view the report via web, phone or from another computer, we need to publish the report. Search **Publish** in Power BI. We would need a **Business Email** for that.
+
 
 ## Resume Example
 

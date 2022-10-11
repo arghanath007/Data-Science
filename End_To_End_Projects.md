@@ -15,9 +15,9 @@
 
 * Link -> <https://codebasics.io/event/codebasics-resume-project-challenge>
 
-1. Link(Hospitality to Revenue Team) Challenge *1* ->  **Completed**
+1. Link(Hospitality to Revenue Team) Challenge ->  **Completed**
 
-2. Link(Supply Chain issue in FMCG Domain) Challenge *2* -> **Working on it**
+2. Link(Supply Chain issue in FMCG Domain) Challenge -> **Working on it**
 
 > Required Power BI Desktop but it is only available for Windows.
 

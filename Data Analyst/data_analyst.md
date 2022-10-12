@@ -31,13 +31,14 @@
 ## Requirements (Data Analyst)
 
 > Link -> <https://www.youtube.com/watch?v=x6tnVOn4st4>
+> Requirements -> <https://github.com/codebasics/py/blob/master/TechTopics/DataAnalystRoadMap2020/data_analyst_learning_path_2020.md>
 
 1) Excel Knowledge
 
 * Link - <https://excel-practice-online.com/>
 * Excel -> <https://www.youtube.com/watch?v=Vl0H-qTclOg>
 
-2/ SQL Knowledge (leetcode, stratascratch, datalemur, )
+2/ SQL Knowledge (LeetCode, StrataScratch, DataLemur)
 3/ Coding language (Python, R, etc.)
 
 * Python -> <https://www.learnpython.org/>

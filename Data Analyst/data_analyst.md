@@ -193,6 +193,37 @@ Action-oriented:
 Relevant:
 Time-bound:
 
+### Clear Communication
+
+> Think about some of these things before communication. Clear Communication is key.
+* Reference -> <https://www.coursera.org/learn/ask-questions-make-decisions/supplement/WmZKd/data-scenarios-and-responses>
+
+* Who is your audience? -> Other Data Analyst and Project Manager and eventually VP of sales, who is your stakeholder.
+
+* What they already know
+* what they need to know
+* How can you communicate that effectively to them.
+
+### Meeting Best Practices
+
+* Reference -> <https://www.coursera.org/learn/ask-questions-make-decisions/supplement/4H8Ic/leading-great-meetings>
+
+1. Come prepared
+   * Bring your notebook or your note taking device.
+   * Read meeting agenda beforehand.
+   * Prepare notes and presentation.(If I am leading the meeting)
+   * Be ready to answer questions.(If I am leading the meeting)
+   * Focus to making a clear decision and include the person needed to make the decision. 
+2. Be on time
+   * Arrive 5-10 minutes early.
+   * Setup your laptop and get ready to present.
+3. Pay attention
+   * Asking questions.
+   * Reach out after meeting.
+4. Ask questions
+   * Keep everyone involved.
+   * Open to answer questions.
+
 ## DAX, syntax for Power BI
 
 > Link -> <https://www.sqlbi.com/p/introducing-dax-video-course/>

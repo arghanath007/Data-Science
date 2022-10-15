@@ -2,6 +2,7 @@
 
 * 1. <https://www.youtube.com/watch?v=957fQCm5aDo&t=673s>
 * 2. <https://www.youtube.com/watch?v=9O_4WCUi4AQ>
+* 3. <https://www.coursera.org/articles/data-analytics-projects-for-beginners>
 
 ## 2 Projects For Data Analysis and Data Scientist
 

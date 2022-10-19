@@ -14,7 +14,9 @@
 
 * Data Modeling Techniques -> <https://dataedo.com/blog/basic-data-modeling-techniques>
 
+* Importing external sources to spreadsheets -> <https://www.coursera.org/learn/data-preparation/supplement/esVz6/from-external-source-to-a-spreadsheet>
 
+* Naming Conventions -> <https://www.coursera.org/learn/data-preparation/supplement/fLKJI/organization-guidelines>
 
 
 

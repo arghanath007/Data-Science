@@ -14,6 +14,22 @@
 
 * **MVP** -> Minimum Viable Product
 
+## Steps to follow when starting a new project
+
+1. Load the data into PowerBi.(Single file or multiple files)
+2. Pick colors based on some of the company logos in that field or create your own. 
+
+### Colors
+
+* Primary -> #2596be
+* Gradient -> #A8EB12
+* Second -> #6079bd
+
+### Inspiration Post
+
+* Link -> https://www.novypro.com/project/supply-chain-|-codebasics-resume-challenge-2
+
+
 ## Data Science
 
 > Creating new ways of modelling and understanding the unknown by using raw data.

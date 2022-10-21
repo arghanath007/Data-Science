@@ -18,12 +18,18 @@
 
 1. Load the data into PowerBi.(Single file or multiple files)
 2. Pick colors based on some of the company logos in that field or create your own. 
+3. Create the needed Measures for the report/dashboard
+4. 
 
 ### Colors
 
 * Primary -> #2596be
 * Gradient -> #A8EB12
 * Second -> #6079bd
+
+### Comparing current month/year with previous month/year
+
+1. Pick the **KPI** Visual and then put the current value in the **Value** field and the previous value in the **Target** field. **Trend Axis** is for what type month/year/day whatever.
 
 ### Inspiration Post
 

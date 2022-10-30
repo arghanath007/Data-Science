@@ -16,25 +16,52 @@
 
 ## Steps to follow when starting a new project
 
-1. Load the data into PowerBi.(Single file or multiple files)
-2. Pick colors based on some of the company logos in that field or create your own. 
-3. Create the needed Measures for the report/dashboard
-4. 
+1. Checking data integrity. Checking if the data is valid, complete and clean before starting analysis. It will make sure that the analysis and eventual conclusions are accurate.
+2. Load the data into PowerBi.(Single file or multiple files)
+3. Make a Custom Background for the report. Add the logo and the name of the company to the Custom Background only. If you want you can add illustrations to the background.
+4. Pick colors based on some of the company logos in that field or create your own. Pick a Color palette and stick to it.
+5. Create the needed Measures for the report/dashboard
+6. If needed at the bottom of every page, add all the full form of the abbreviations used in the report.
 
-### Colors
+
+## Data Integrity
+
+1. Checking if the data is valid, complete and clean before starting analysis. It will make sure that the analysis and eventual conclusions are accurate.
+
+### Types of Insufficient Data
+
+* Data from only one source
+* Data that keeps updating
+* Outdated data
+* Geographically-limited data
+
+### Ways to address insufficient data
+
+* Identify trends with the available data
+* Wait for more data if time allows
+* Talk with stakeholders and adjust the objectives
+* Look for a new dataset
+
+
+* **Issues with Data** -> https://www.coursera.org/learn/process-data/supplement/NQPE4/what-to-do-when-you-find-an-issue-with-your-data
+
+
+
+### Colors Palette Example
 
 * Primary -> #2596be
 * Gradient -> #A8EB12
 * Second -> #6079bd
+  
+### Color Palette links
+
+* Color Palette Generator -> https://mycolor.space/
+* Color Picker -> https://imagecolorpicker.com/
+* Theme Generator -> https://themes.powerbi.tips/
 
 ### Comparing current month/year with previous month/year
 
 1. Pick the **KPI** Visual and then put the current value in the **Value** field and the previous value in the **Target** field. **Trend Axis** is for what type month/year/day whatever.
-
-### Inspiration Post
-
-* Link -> https://www.novypro.com/project/supply-chain-|-codebasics-resume-challenge-2
-
 
 ## Data Science
 

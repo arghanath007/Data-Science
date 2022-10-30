@@ -19,7 +19,7 @@
 
 1. Link(Hospitality to Revenue Team) Challenge ->  **Completed**
 
-2. Link(Supply Chain issue in FMCG Domain) Challenge -> **Working on it**
+2. Link(Supply Chain issue in FMCG Domain) Challenge -> **Completed**
 
 > Required Power BI Desktop but it is only available for Windows.
 

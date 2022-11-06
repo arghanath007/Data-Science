@@ -4,6 +4,7 @@
 * 2. <https://www.youtube.com/watch?v=9O_4WCUi4AQ>
 * 3. <https://www.coursera.org/articles/data-analytics-projects-for-beginners>
 * 4. Github Link for Projects -> <https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code>
+* 5. Tips For Building Powerful Data Science Projects -> <https://www.youtube.com/watch?v=zh-xQp508Vk>
 
 ## 2 Projects For Data Analysis and Data Scientist
 
@@ -32,4 +33,14 @@
 3. Link(Potato Disease Classification) -> <https://www.youtube.com/playlist?list=PLeo1K3hjS3ut49PskOfLnE6WUoOp_2lsD>
 
 > From these above links, learn the concepts, working and the process and customize them according to my needs and make a unique project of my own which can be put on my resume.
+
+
+## Tips
+
+1. Create projects that you are **passionate** about. They will be niche projects but you are passionate about them. 
+2. Create an **interesting** project. Create your own **unique** project with your **own dataset**.
+3. Upload your project on **Github**, **Kaggle**, **YouTube** and **Medium**
+4. Creating appealing and **interactive** visualizations is a plus point. Creating visuals that are **summarizing** my long lines of code is a plus point. **Visuals** are important for getting the attention of the recruiter.
+5. Make clean dashboard, visuals, info-graphic, power-point presentation and publish them to the public for everyone to see. PPTs could be used to summarize my hardcore technical skills. **Don't tell them** but **show them** your skills and I know what I am doing.
+6. Create a project which has **some impact** on other people. The project creates some impact. If I build something for the community then go post it in the community like **Reddit**, **Linkedin**, **YouTube**.
 

@@ -1,4 +1,4 @@
-tensorflow==2.8.1
+tensorflow==2.9.3
 fastapi
 uvicorn
 python-multipart

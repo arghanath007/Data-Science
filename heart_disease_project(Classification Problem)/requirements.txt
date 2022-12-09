@@ -3,7 +3,7 @@ backcall @ file:///home/conda/feedstock_root/build_artifacts/backcall_1592338393
 backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifacts/backports.functools_lru_cache_1618230623929/work
 catboost==1.0.3
 category-encoders==2.3.0
-certifi==2021.10.8
+certifi==2022.12.7
 cloudpickle==2.0.0
 cycler==0.11.0
 debugpy @ file:///tmp/build/80754af9/debugpy_1637091796427/work

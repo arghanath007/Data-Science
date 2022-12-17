@@ -16,10 +16,14 @@
 
 ## Steps to follow when starting a new project
 
-1. Load the data into PowerBi.(Single file or multiple files)
-2. Pick colors based on some of the company logos in that field or create your own. 
-3. Create the needed Measures for the report/dashboard
-4. 
+1. Pick colors based on some/similar company logos in that field or create your own. Create a **custom palette**.
+2. Create a **custom background** for the report/dashboard.
+3. Create a **Mock-up** of the report.
+4. **Load the data** into PowerBi.(Single file or multiple files).
+5. Create the **needed Measures** for the report/dashboard.
+6. Find some **illustrations/SVGs** for the report/dashboard.
+
+## Atliq Mart FMCG Supply Chain
 
 ### Colors
 
@@ -35,6 +39,33 @@
 
 * Link -> https://www.novypro.com/project/supply-chain-|-codebasics-resume-challenge-2
 
+## Provide Insights to Executive team in Telecom Domain
+
+### Colors
+
+* Primary -> #1f2d6a
+* Gradient -> #514187
+* Second -> #555a9e
+* Few More -> #7e3a7c, #c64f77, #f67b66, #ffb75b, #f9f871
+* Title -> #2f8381
+
+
+### Inspiration Post
+
+* Link -> https://www.novypro.com/project/challenge-3--provide-insights-to-executive-team-in-telecom-domain
+
+### Conclusion
+
+* We can see in the month of june, when 5G was launched, we had the lowest number of active monthly users. In july is increased to normal but in the coming months it kept falling.
+* In the month of june, we had the lowest revenue in that month.
+* In the month of june, we had the highest ARPU or average revenue per user. In the uncoming months as well it has been steadily increasing.
+* Also we had the second lowest average revenue in the month of june. Lowest was in january.
+* As 5G was released active users of our service started unsubscribing from our plans. From the month of june onwards we have a increse in unsubscriber count.
+* We also had the lowest total active users in the month of june. 
+* We can see that city of Pune had the highest decrease in the ARPU section. 
+* In Delhi, the average revenue had increased by 2.83% after 5G was released. Lucknow had the highest decrease in their average revenue after 5G was released.
+* In Pune, they saw a spike of 18% increase in the monthly active users. Whereas Ahmadabad had the highest decrease of about 19% in their monthly active users.
+* Lucknow saw the highest increase of about 78% in people who where unsubscribing from their plans. Whereas Mumbai, saw the highest decrease of about 12.5% in people who were unsubscribing from their plans.
 
 ## Data Science
 

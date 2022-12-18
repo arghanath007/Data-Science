@@ -16,30 +16,12 @@
 
 ## Steps to follow when starting a new project
 
-1. Checking data integrity. Checking if the data is valid, complete and clean before starting analysis. It will make sure that the analysis and eventual conclusions are accurate.
-2. Load the data into PowerBi.(Single file or multiple files).
+1. Pick colors based on some/similar company logos in that field or create your own. Create a **custom palette**.
+2. Create a **custom background** for the report/dashboard.
 3. Create a **Mock-up** of the report.
-4. Pick colors based on some/similar company logos in that field or create your own. Create a **custom palette**.
-5. Make a **Custom Background** for the report. Add the logo and the name of the company to the Custom Background only. If you want you can add **illustrations** to the background. Find some **illustrations/SVGs** for the report/dashboard.
-6. Create the needed Measures for the report/dashboard
-7. If needed at the bottom of every page, add all the **full form** of the **abbreviations** used in the report.
-
-
-## Comparing current month/year with previous month/year
-
-1. Pick the **KPI** Visual and then put the current value in the **Value** field and the previous value in the **Target** field. **Trend Axis** is for what type month/year/day whatever.
-
-### Colors Palette Example
-
-* Primary -> #2596be
-* Gradient -> #A8EB12
-* Second -> #6079bd
-  
-### Color Palette links
-
-* Color Palette Generator -> https://mycolor.space/
-* Color Picker -> https://imagecolorpicker.com/
-* Theme Generator -> https://themes.powerbi.tips/
+4. **Load the data** into PowerBi.(Single file or multiple files).
+5. Create the **needed Measures** for the report/dashboard.
+6. Find some **illustrations/SVGs** for the report/dashboard.
 
 ## Atliq Mart FMCG Supply Chain
 
@@ -48,6 +30,10 @@
 * Primary -> #2596be
 * Gradient -> #A8EB12
 * Second -> #6079bd
+
+### Comparing current month/year with previous month/year
+
+1. Pick the **KPI** Visual and then put the current value in the **Value** field and the previous value in the **Target** field. **Trend Axis** is for what type month/year/day whatever.
 
 ### Inspiration Post
 
@@ -72,41 +58,14 @@
 
 * We can see in the month of june, when 5G was launched, we had the lowest number of active monthly users. In july is increased to normal but in the coming months it kept falling.
 * In the month of june, we had the lowest revenue in that month.
-* In the month of june, we had the highest ARPU or average revenue per user. In the upcoming months as well it has been steadily increasing.
+* In the month of june, we had the highest ARPU or average revenue per user. In the uncoming months as well it has been steadily increasing.
 * Also we had the second lowest average revenue in the month of june. Lowest was in january.
-* As 5G was released active users of our service started unsubscribing from our plans. From the month of june onwards we have a increase in unsubscribed count.
+* As 5G was released active users of our service started unsubscribing from our plans. From the month of june onwards we have a increse in unsubscriber count.
 * We also had the lowest total active users in the month of june. 
 * We can see that city of Pune had the highest decrease in the ARPU section. 
 * In Delhi, the average revenue had increased by 2.83% after 5G was released. Lucknow had the highest decrease in their average revenue after 5G was released.
 * In Pune, they saw a spike of 18% increase in the monthly active users. Whereas Ahmadabad had the highest decrease of about 19% in their monthly active users.
 * Lucknow saw the highest increase of about 78% in people who where unsubscribing from their plans. Whereas Mumbai, saw the highest decrease of about 12.5% in people who were unsubscribing from their plans.
-
-
-## Data Integrity
-
-1. Checking if the data is valid, complete and clean before starting analysis. It will make sure that the analysis and eventual conclusions are accurate.
-
-### Types of Insufficient Data
-
-* Data from only one source
-* Data that keeps updating
-* Outdated data
-* Geographically-limited data
-
-### Ways to address insufficient data
-
-* Identify trends with the available data
-* Wait for more data if time allows
-* Talk with stakeholders and adjust the objectives
-* Look for a new dataset
-
-
-* **Issues with Data** -> https://www.coursera.org/learn/process-data/supplement/NQPE4/what-to-do-when-you-find-an-issue-with-your-data
-
-### Inspiration Post
-
-* Link -> https://www.novypro.com/project/supply-chain-|-codebasics-resume-challenge-2
-
 
 ## Data Science
 

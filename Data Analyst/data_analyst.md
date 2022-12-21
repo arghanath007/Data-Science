@@ -29,6 +29,26 @@
 
 1. Pick the **KPI** Visual and then put the current value in the **Value** field and the previous value in the **Target** field. **Trend Axis** is for what type month/year/day whatever.
 
+## Questions and Answers.
+
+### 1
+
+![image](https://user-images.githubusercontent.com/54589605/208854095-01c5869b-d9fa-4de9-8d0b-9f4a6c1d0c56.png)
+![image](https://user-images.githubusercontent.com/54589605/208854338-9245a37a-9a29-4f88-b97b-79fef77e9e79.png)
+
+### 2
+
+![image](https://user-images.githubusercontent.com/54589605/208855087-9b473a85-f37f-407e-a2da-92c5197f1c07.png)
+![image](https://user-images.githubusercontent.com/54589605/208855221-61f60114-b647-44cc-8a3c-5fbffa763443.png)
+
+### 3
+
+![image](https://user-images.githubusercontent.com/54589605/208857820-f8a01e5d-f3c8-46f7-b4d2-04ba61a880d3.png)
+
+
+
+
+
 ### Colors Palette Example
 
 * Primary -> #2596be

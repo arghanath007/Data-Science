@@ -29,6 +29,94 @@
 
 1. Pick the **KPI** Visual and then put the current value in the **Value** field and the previous value in the **Target** field. **Trend Axis** is for what type month/year/day whatever.
 
+## Questions and Answers.
+
+### 1
+
+![image](https://user-images.githubusercontent.com/54589605/208854095-01c5869b-d9fa-4de9-8d0b-9f4a6c1d0c56.png)
+![image](https://user-images.githubusercontent.com/54589605/208854338-9245a37a-9a29-4f88-b97b-79fef77e9e79.png)
+
+### 2
+
+![image](https://user-images.githubusercontent.com/54589605/208855087-9b473a85-f37f-407e-a2da-92c5197f1c07.png)
+![image](https://user-images.githubusercontent.com/54589605/208855221-61f60114-b647-44cc-8a3c-5fbffa763443.png)
+
+### 3
+
+![image](https://user-images.githubusercontent.com/54589605/208857820-f8a01e5d-f3c8-46f7-b4d2-04ba61a880d3.png)
+
+### 4
+
+![image](https://user-images.githubusercontent.com/54589605/208858311-27d8a7a9-8c35-4679-acf5-a2d5f063edfa.png)
+![image](https://user-images.githubusercontent.com/54589605/208858471-abf17c17-daf7-419e-8af7-e57a25bfe5d4.png)
+
+### 5
+
+![image](https://user-images.githubusercontent.com/54589605/208858648-69e7ea60-aef1-45c1-95ab-0a5b82443d20.png)
+
+### 6
+
+![image](https://user-images.githubusercontent.com/54589605/208859143-65ca2b8b-9e38-4114-9b67-fdd5b8521be7.png)
+![image](https://user-images.githubusercontent.com/54589605/208859554-65363358-77ff-4f9c-8b12-01d489b660f4.png)
+![image](https://user-images.githubusercontent.com/54589605/208859969-9007538a-883f-4be4-a330-adc020acd48a.png)
+
+### 7
+
+![image](https://user-images.githubusercontent.com/54589605/208860156-b60fa6a4-9797-45e6-91b9-d02541f04921.png)
+![image](https://user-images.githubusercontent.com/54589605/208860411-e38bee9a-a037-4e4d-ba70-88fc8ecb2bf0.png)
+
+### 8
+
+![image](https://user-images.githubusercontent.com/54589605/208861315-d8538d1e-13fa-434f-86ca-629a5e11e6b6.png)
+![image](https://user-images.githubusercontent.com/54589605/208861423-a5013524-ca6f-4a65-888d-1b23e992d51c.png)
+![image](https://user-images.githubusercontent.com/54589605/208861657-265ef7c9-b6f1-4fc5-99b1-0e6d58f15943.png)
+![image](https://user-images.githubusercontent.com/54589605/208861816-c248e688-471e-42b7-9733-68798d6f74f8.png)
+
+### 9
+
+![image](https://user-images.githubusercontent.com/54589605/208862739-57d8d25c-69a3-4370-947b-57e062afa341.png)
+![image](https://user-images.githubusercontent.com/54589605/208862953-703ea72b-01ff-4b1b-8714-31bfedbb259e.png)
+
+### 10
+
+![image](https://user-images.githubusercontent.com/54589605/208863132-516512c5-361e-4de6-9229-b96c3cc1dcfc.png)
+
+### 11
+
+![11](https://user-images.githubusercontent.com/54589605/208863662-d92d6f82-5b44-42ea-b7e7-1a23304457b0.png)
+![11_1](https://user-images.githubusercontent.com/54589605/208863700-c8401ab1-8d93-4ecb-ad2c-9736fc1f9f27.png)
+
+### 12
+
+![image](https://user-images.githubusercontent.com/54589605/208864623-c54305da-5287-49de-82c8-1a2db16869a2.png)
+![image](https://user-images.githubusercontent.com/54589605/208864812-107624af-f747-441f-8a9d-222fad6a1a9a.png)
+![image](https://user-images.githubusercontent.com/54589605/208864964-f21dc8e6-cad8-4269-a51f-c135517519cd.png)
+![image](https://user-images.githubusercontent.com/54589605/208865104-271e7adc-5a00-4e2e-8075-3c0b62bcd539.png)
+![image](https://user-images.githubusercontent.com/54589605/208865263-6be8d985-023c-41b2-bf8d-3d2a444b28ae.png)
+
+### 13
+
+![image](https://user-images.githubusercontent.com/54589605/208865451-36996b35-6110-449e-90cf-12a696a37702.png)
+![image](https://user-images.githubusercontent.com/54589605/208865527-e6811f30-c2f5-4320-949d-a353de4e1a27.png)
+![image](https://user-images.githubusercontent.com/54589605/208868272-74d83cfb-be7b-4629-b1c6-2175d7ee8b73.png)
+
+### 14
+
+![image](https://user-images.githubusercontent.com/54589605/208868844-e54e36a8-1aaa-4880-8ca5-2cc8c2ee1633.png)
+![image](https://user-images.githubusercontent.com/54589605/208868978-ae86c09b-d1f8-44c0-b364-27b1332f6878.png)
+![image](https://user-images.githubusercontent.com/54589605/208869099-e26620f9-67a0-45cd-8ac8-1a4fe8ec3930.png)
+![image](https://user-images.githubusercontent.com/54589605/208869232-dc84b038-18a5-482e-ad61-48ce95a52b53.png)
+
+### 15
+
+![image](https://user-images.githubusercontent.com/54589605/208869540-0256b80d-2065-403b-bd2a-c5bcd403c1bd.png)
+![image](https://user-images.githubusercontent.com/54589605/208869632-ad1912d2-454c-480a-b104-c7eaff768fcf.png)
+
+
+
+
+
+
 ### Colors Palette Example
 
 * Primary -> #2596be

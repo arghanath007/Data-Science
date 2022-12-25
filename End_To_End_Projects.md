@@ -44,3 +44,24 @@
 5. Make clean dashboard, visuals, info-graphic, power-point presentation and publish them to the public for everyone to see. PPTs could be used to summarize my hardcore technical skills. **Don't tell them** but **show them** your skills and I know what I am doing.
 6. Create a project which has **some impact** on other people. The project creates some impact. If I build something for the community then go post it in the community like **Reddit**, **Linkedin**, **YouTube**.
 
+## Needed Python Libraries for Data Science.
+
+* Link -> https://www.youtube.com/watch?v=KOmGPNS-YM8&list=WL&index=2
+
+1. Numpy
+2. Pandas
+3. Matplotlib
+4. Seaborn
+5. Scikit-learn(SK_learn)
+6. Scrapy
+7. Beautifulsoup
+8. Tensorflow
+9. Pytorch
+10. SpaCy
+11. NLTK
+12. OpenCV
+
+
+## Difference between Data Analyst and Data Engineer and Data Scientist
+
+* Link -> https://www.youtube.com/watch?v=q9oAZwhuUy4&list=WL&index=4

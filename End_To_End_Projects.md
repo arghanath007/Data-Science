@@ -65,3 +65,8 @@
 ## Difference between Data Analyst and Data Engineer and Data Scientist
 
 * Link -> https://www.youtube.com/watch?v=q9oAZwhuUy4&list=WL&index=4
+
+
+## Python Roles
+
+* Link -> https://www.youtube.com/watch?v=fHw188SBb9k

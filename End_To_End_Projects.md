@@ -70,3 +70,8 @@
 ## Python Roles
 
 * Link -> https://www.youtube.com/watch?v=fHw188SBb9k
+
+
+## 5 Unique Python Project Ideas for Your Resume
+
+* Link -> https://www.youtube.com/watch?v=6erwYj4T86c

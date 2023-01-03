@@ -44,6 +44,10 @@
 5. Make clean dashboard, visuals, info-graphic, power-point presentation and publish them to the public for everyone to see. PPTs could be used to summarize my hardcore technical skills. **Don't tell them** but **show them** your skills and I know what I am doing.
 6. Create a project which has **some impact** on other people. The project creates some impact. If I build something for the community then go post it in the community like **Reddit**, **Linkedin**, **YouTube**.
 
+## Complete Data Analyst Roadmap 2023 | Learn data analytics skills in 3 months
+
+* Video Roadmap -> https://www.youtube.com/watch?v=b_n-hhtMbXA
+
 ## Needed Python Libraries for Data Science.
 
 * Link -> https://www.youtube.com/watch?v=KOmGPNS-YM8&list=WL&index=2
@@ -75,3 +79,4 @@
 ## 5 Unique Python Project Ideas for Your Resume
 
 * Link -> https://www.youtube.com/watch?v=6erwYj4T86c
+

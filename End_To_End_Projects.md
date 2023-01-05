@@ -47,6 +47,7 @@
 ## Complete Data Analyst Roadmap 2023 | Learn data analytics skills in 3 months
 
 * Video Roadmap -> https://www.youtube.com/watch?v=b_n-hhtMbXA
+* Things to avoid -> https://www.youtube.com/watch?v=t6CD1EwU5kc
 
 ## Needed Python Libraries for Data Science.
 

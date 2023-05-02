@@ -2,7 +2,7 @@ aniso8601==9.0.1
 attrs==21.2.0
 click==8.0.3
 colorama==0.4.4
-Flask==2.0.2
+Flask==2.3.2
 Flask-Cors==3.0.10
 flask-restx==0.5.1
 Flask-Reuploaded==1.1.0

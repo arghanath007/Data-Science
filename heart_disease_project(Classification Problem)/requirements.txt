@@ -50,7 +50,7 @@ python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateu
 pytz==2021.3
 pyzmq==19.0.2
 scikit-learn==1.0.1
-scipy==1.7.3
+scipy==1.10.0
 seaborn==0.11.2
 shap==0.40.0
 six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work

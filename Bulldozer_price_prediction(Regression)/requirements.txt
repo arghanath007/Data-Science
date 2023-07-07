@@ -31,7 +31,7 @@ python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateu
 pytz==2021.3
 pyzmq==19.0.2
 scikit-learn==1.0.2
-scipy==1.7.3
+scipy==1.10.0
 six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
 threadpoolctl==3.0.0
 tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1610094706440/work

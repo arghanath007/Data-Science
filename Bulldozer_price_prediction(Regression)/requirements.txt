@@ -1,6 +1,6 @@
 backcall @ file:///home/conda/feedstock_root/build_artifacts/backcall_1592338393461/work
 backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifacts/backports.functools_lru_cache_1618230623929/work
-certifi==2022.12.7
+certifi==2023.7.22
 cycler==0.11.0
 debugpy @ file:///tmp/build/80754af9/debugpy_1637091796427/work
 decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1641555617451/work

@@ -17,7 +17,7 @@ graphviz==0.19.1
 ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1638555510557/work/dist/ipykernel-6.6.0-py3-none-any.whl
 ipython @ file:///home/conda/feedstock_root/build_artifacts/ipython_1638470220711/work
 jedi @ file:///home/conda/feedstock_root/build_artifacts/jedi_1637175084646/work
-Jinja2==3.0.3
+Jinja2==3.1.3
 joblib==1.2.0
 jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1637611911738/work
 jupyter-core @ file:///home/conda/feedstock_root/build_artifacts/jupyter_core_1636814262349/work

@@ -12,7 +12,7 @@ distlib==0.3.4
 eli5==0.11.0
 entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1605121927639/work/dist/entrypoints-0.3-py2.py3-none-any.whl
 filelock==3.4.2
-fonttools==4.28.5
+fonttools==4.43.0
 graphviz==0.19.1
 ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1638555510557/work/dist/ipykernel-6.6.0-py3-none-any.whl
 ipython @ file:///home/conda/feedstock_root/build_artifacts/ipython_1638470220711/work

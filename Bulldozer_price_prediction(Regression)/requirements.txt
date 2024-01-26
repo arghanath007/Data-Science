@@ -5,7 +5,7 @@ cycler==0.11.0
 debugpy @ file:///tmp/build/80754af9/debugpy_1637091796427/work
 decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1641555617451/work
 entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1605121927639/work/dist/entrypoints-0.3-py2.py3-none-any.whl
-fonttools==4.28.5
+fonttools==4.43.0
 ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1641325327884/work/dist/ipykernel-6.6.1-py3-none-any.whl
 ipython @ file:///home/conda/feedstock_root/build_artifacts/ipython_1641404644249/work
 jedi @ file:///home/conda/feedstock_root/build_artifacts/jedi_1637175084646/work

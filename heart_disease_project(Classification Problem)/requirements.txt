@@ -64,7 +64,7 @@ toml==0.10.2
 tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1610094706440/work
 tox==3.24.5
 tox-venv==0.4.0
-tqdm==4.62.3
+tqdm==4.66.3
 traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1635260543454/work
 virtualenv==20.11.1
 wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1600965781394/work
